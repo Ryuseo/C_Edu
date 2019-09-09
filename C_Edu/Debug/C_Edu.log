@@ -1,8 +1,2 @@
 ﻿  01_Warmnig_Up.cpp
-C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\01_Warmnig_Up.cpp(6,1): warning C4326:  'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
-C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\01_Warmnig_Up.cpp(15,11): warning C4477:  'scanf_s' : 서식 문자열 '%c'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 3의 형식이 'float *'입니다.
-C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\01_Warmnig_Up.cpp(15,11): message :  이 인수는 버퍼 크기로 사용됩니다.
-C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\01_Warmnig_Up.cpp(15,11): warning C4473:  'scanf_s': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
-C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\01_Warmnig_Up.cpp(15,11): message :  자리 표시자 및 해당 매개 변수에는 variadic 인수가 4개 필요하지만 3개가 제공되었습니다.
-C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\01_Warmnig_Up.cpp(15,11): message :  누락된 variadic 인수 4이(가) 서식 문자열 '%f'에 필요합니다.
   C_Edu.vcxproj -> C:\Users\user\Desktop\Programming_Edu\C_Edu\Debug\C_Edu.exe
