@@ -14,7 +14,6 @@ int main(void)
 	{
 		print_start();
 
-		//다들 된다는데 왜 난 scnaf_s(%c, &asdf)가 안될까 ㅠ
 		scanf_s("%f %c %f", &input_num1, &input_char, 1, &input_num2);
 		printf("%f %c %f\n\n", input_num1, input_char, input_num2);
 
