@@ -24,12 +24,24 @@
     <ClCompile Include="02_Warmnig_Up.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="템플릿.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="03_scanf_s%28%29.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="01_printf().h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="02_Warmnig_Up.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="템플릿.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="03_scanf_s%28%29.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
