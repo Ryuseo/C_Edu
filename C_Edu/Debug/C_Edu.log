@@ -1,2 +1,29 @@
-﻿  03_scanf_s().cpp
+﻿  04_variablecpp.cpp
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(211,12): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 '__int64'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(211,12): message :  서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(211,12): message :  서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(235,11): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 '__int64'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(235,11): message :  서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(235,11): message :  서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(235,11): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 '__int64'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(235,11): message :  서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(235,11): message :  서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(270,11): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(270,11): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'double'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(305,11): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'double'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(305,11): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'double'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(340,11): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'long double'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(340,11): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'long double'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(445,11): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'unsigned __int64'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(445,11): message :  서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(445,11): message :  서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(445,11): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(445,11): message :  서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(445,11): message :  서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(467,11): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'unsigned __int64'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(467,11): message :  서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(467,11): message :  서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(467,11): warning C4477:  'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'unsigned __int64'입니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(467,11): message :  서식 문자열에서 '%lld'을(를) 사용하는 것이 좋습니다.
+C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(467,11): message :  서식 문자열에서 '%I64d'을(를) 사용하는 것이 좋습니다.
   C_Edu.vcxproj -> C:\Users\user\Desktop\Programming_Edu\C_Edu\Debug\C_Edu.exe
