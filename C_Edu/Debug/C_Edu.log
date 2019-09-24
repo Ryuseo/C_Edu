@@ -1,8 +1,13 @@
-﻿  04_variablecpp.cpp
-C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(211,32): warning C4838:  'int'에서 'unsigned char'(으)로의 변환에는 축소 변환이 필요합니다.
-C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(211,45): warning C4305:  '초기화 중': 'int'에서 'unsigned char'(으)로 잘립니다.
-C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(211,32): warning C4309:  '초기화 중': 상수 값이 잘립니다.
-C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(435,34): warning C4838:  'int'에서 'unsigned char'(으)로의 변환에는 축소 변환이 필요합니다.
-C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(435,47): warning C4305:  '초기화 중': 'int'에서 'unsigned char'(으)로 잘립니다.
-C:\Users\user\Desktop\Programming_Edu\C_Edu\C_Edu\04_variablecpp.cpp(435,34): warning C4309:  '초기화 중': 상수 값이 잘립니다.
-  C_Edu.vcxproj -> C:\Users\user\Desktop\Programming_Edu\C_Edu\Debug\C_Edu.exe
+﻿  01_printf().cpp
+  03_scanf_s().cpp
+  04_variablecpp.cpp
+C:\Users\rkd4a\Desktop\Edu\C_Edu\C_Edu\04_variablecpp.cpp(211,32): warning C4838: 'int'에서 'unsigned char'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\rkd4a\Desktop\Edu\C_Edu\C_Edu\04_variablecpp.cpp(211,45): warning C4305: '초기화 중': 'int'에서 'unsigned char'(으)로 잘립니다.
+C:\Users\rkd4a\Desktop\Edu\C_Edu\C_Edu\04_variablecpp.cpp(211,32): warning C4309: '초기화 중': 상수 값이 잘립니다.
+C:\Users\rkd4a\Desktop\Edu\C_Edu\C_Edu\04_variablecpp.cpp(435,34): warning C4838: 'int'에서 'unsigned char'(으)로의 변환에는 축소 변환이 필요합니다.
+C:\Users\rkd4a\Desktop\Edu\C_Edu\C_Edu\04_variablecpp.cpp(435,47): warning C4305: '초기화 중': 'int'에서 'unsigned char'(으)로 잘립니다.
+  main.cpp
+  코드를 생성하고 있습니다...
+C:\Users\rkd4a\Desktop\Edu\C_Edu\C_Edu\04_variablecpp.cpp(435,34): warning C4309: '초기화 중': 상수 값이 잘립니다.
+  02_Warmnig_Up.cpp
+  C_Edu.vcxproj -> C:\Users\rkd4a\Desktop\Edu\C_Edu\Debug\C_Edu.exe

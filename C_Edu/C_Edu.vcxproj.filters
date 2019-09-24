@@ -30,7 +30,7 @@
     <ClCompile Include="03_scanf_s%28%29.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="04_variablecpp.cpp">
+    <ClCompile Include="04_variable.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
