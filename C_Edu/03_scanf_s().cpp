@@ -5,7 +5,7 @@ void play_03()
 	int num;
 	int play = 1;
 
-	printf("printf() 包访 抗力\n\n");
+	printf("scanf_s() 包访 抗力\n\n");
 
 	while (play)
 	{

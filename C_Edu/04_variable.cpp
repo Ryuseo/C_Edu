@@ -6,7 +6,7 @@ void play_04()
 	int num;
 	int play = 1;
 
-	printf("printf() 관련 예제\n\n");
+	printf("변수 관련 예제\n\n");
 
 	while (play)
 	{
