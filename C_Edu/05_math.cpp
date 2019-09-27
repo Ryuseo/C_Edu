@@ -16,6 +16,7 @@ void play_05()
 		printf("5. 관계 연산자 예제\n");
 		printf("6. 논리 연산자 예제\n");
 		printf("7. 비트 연산자 예제\n");
+		printf("8. 연산자 테크닉 예제\n");
 		printf("\n");
 		printf("실행할 예제 번호 입력.(다른 프로그램 실행은 0번) : ");
 		scanf_s("%d", &num);
@@ -48,6 +49,9 @@ void play_05()
 			break;
 		case 7:
 			bit_op();
+		case 8:
+			sp_skill_op();
+			break;
 		default:
 			printf("없는 예문. 다시 입력");
 			break;
@@ -93,7 +97,7 @@ void compound_assignment_op()
 	printf("x -= y == x = x - y = %d\n", x - y);
 	printf("x *= y == x = x * y = %d\n", x * y);
 	printf("x /= y == x = x / y = %d\n", x / y);
-	printf("x %%= y == x = x % y = %d\n", x % y);
+	printf("x %%= y == x = x %% y = %d\n", x % y);
 	printf("x &= y == x = x & y = %d\n", x & y);
 	printf("x |= y == x = x | y = %d\n", x | y);
 	printf("x ^= y == x = x ^ y = %d\n", x ^ y);
@@ -189,4 +193,30 @@ void bit_op()
 	printf("NOT(~) x = %08X\n", ~x);
 	printf("x << 1 = %08X\n", x << 1);
 	printf("x >> 1 = %08X\n", x >> 1);
+}
+
+void sp_skill_op()
+{
+	switch_value_notemp();	//temp없이 2개의 변수의 값 바꾸기
+	check_odd_or_even();	//3항연산자로 홀짝 체크하기
+}
+
+void switch_value_notemp()
+{
+	int a = 10, b = 20;
+
+	printf("temp없이 값 바꾸기 : a = %d, b = %d -> ", a, b);
+
+	a ^= b ^= a ^= b;
+
+	printf("a = %d, b = %d\n", a, b);
+}
+
+void check_odd_or_even()
+{
+	printf("홀짝 체크 : ");
+
+	for (int i = 0; i < 10; i++)
+		i & 1 ? printf("홀(%d) / ", i) : printf("짝(%d) / ", i);
+	printf("\n");
 }

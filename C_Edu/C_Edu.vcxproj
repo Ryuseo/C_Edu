@@ -130,6 +130,8 @@
     <ClCompile Include="03_scanf_s%28%29.cpp" />
     <ClCompile Include="04_variable.cpp" />
     <ClCompile Include="05_math.cpp" />
+    <ClCompile Include="06_if_n_switch.cpp" />
+    <ClCompile Include="07_loop.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="템플릿.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -142,6 +144,8 @@
     <ClInclude Include="03_scanf_s%28%29.h" />
     <ClInclude Include="04_variable.h" />
     <ClInclude Include="05_math.h" />
+    <ClInclude Include="06_if_n_switch.h" />
+    <ClInclude Include="07_loop.h" />
     <ClInclude Include="템플릿.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>

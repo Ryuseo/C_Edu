@@ -36,6 +36,12 @@
     <ClCompile Include="05_math.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="06_if_n_switch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="07_loop.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="01_printf().h">
@@ -54,6 +60,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="05_math.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="06_if_n_switch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="07_loop.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

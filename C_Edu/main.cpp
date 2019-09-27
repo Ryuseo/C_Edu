@@ -3,6 +3,7 @@
 #include "03_scanf_s().h"
 #include "04_variable.h"
 #include "05_math.h"
+#include "06_if_n_switch.h"
 
 int main(void)
 {
@@ -42,6 +43,12 @@ int main(void)
 			break;
 		case 5:
 			play_05();
+			break;
+		case 6:
+			play_06();
+			break;
+		case 7:
+			play_07();
 			break;
 		default:
 			printf("없는 번호. 다시 입력.\n");
