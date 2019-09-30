@@ -5,6 +5,8 @@ void play_05()
 	int num;
 	int play = 1;
 
+	srand(time(NULL));
+
 	printf("수식과 연산자 관련 예제\n\n");
 
 	while (play)
@@ -117,7 +119,6 @@ void explicit_casting()
 
 void relational_op()
 {
-	srand(time(NULL));
 	int nums[3][3];
 
 	for (int i = 0; i < 3; ++i)

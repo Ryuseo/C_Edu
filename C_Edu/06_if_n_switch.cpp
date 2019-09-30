@@ -5,7 +5,7 @@ void play_06()
 	int num;
 	int play = 1;
 
-	printf("printf() 관련 예제\n\n");
+	printf("조건문 관련 예제\n\n");
 
 	while (play)
 	{

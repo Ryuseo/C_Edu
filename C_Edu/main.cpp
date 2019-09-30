@@ -4,6 +4,7 @@
 #include "04_variable.h"
 #include "05_math.h"
 #include "06_if_n_switch.h"
+#include "07_loop.h"
 
 int main(void)
 {
@@ -17,6 +18,8 @@ int main(void)
 		printf("3. scanf_s() 관련 예제 프로그램.\n");
 		printf("4. 변수 관련 예제 프로그램\n");
 		printf("5. 연산자 관련 예제 프로그램\n");
+		printf("6. 조건문 관련 예제 프로그램\n");
+		printf("7. 반복문 관련 예제 프로그램\n");
 		printf("\n");
 		printf("실행할 프로그램 번호 입력 : ");
 
