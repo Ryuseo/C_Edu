@@ -12,6 +12,7 @@ void play_07()
 	while (play)
 	{
 		printf("1. 랜덤 정수 배열 버블정렬\n");
+		printf("2. 0~9 랜덤 배열 검색\n");
 		printf("\n");
 		printf("실행할 예제 번호 입력.(다른 프로그램 실행은 0번) : ");
 		scanf_s("%d", &num);
@@ -28,6 +29,7 @@ void play_07()
 			bubble_sort();
 			break;
 		case 2:
+			search();
 			break;
 		default:
 			printf("없는 예문. 다시 입력");
@@ -39,8 +41,8 @@ void play_07()
 
 void bubble_sort()
 {
+	//출력을 쉽게 10x10로 하려고 [10][10]으로 했을뿐.
 	int nums[10][10];
-
 	for (int i = 0; i < 10; ++i)
 	{
 		for (int j = 0; j < 10; ++j)
@@ -60,9 +62,9 @@ void bubble_sort()
 	}
 
 	//버블 정렬
-	for (int i = 0; i < 100; ++i)
+	for (int i = 0; i < 100; ++i)		//[10][10]하고 [100]의 배열 위치는 동일하다. 하지만 10의 배수가 아닌 숫자일 경우 헷갈리기 쉬우니 왠만하면 하지 말자.
 	{
-		for (int j = 0; j < 100; ++j)
+		for (int j = 0; j < 100; ++j)	//[100]을 [10][10]으로 했다고 해서 O(pow(n,2))가 O(pow(n,4))가 되지 않는다. for문을 4개 써서 구현하더라도. 제곱을 어떻게 주석에 쓸까 고민이다.
 		{
 			if (nums[0][i] < nums[0][j])
 			{
@@ -84,36 +86,31 @@ void bubble_sort()
 
 void search()
 {
-	int nums[10];
+	int nums[10] = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
 
 	for (int i = 0; i < 10; ++i)
 	{
 		bool loop = true;
-		while (loop)
-		{	
+		while (loop == true)
+		{
 			int temp = rand() % 10;
-			for (int j = 0; j < i; ++j)
+			if (nums[temp] == -1)
 			{
-				if (temp == nums[j])
-				{
-					loop = true;
-					break;
-				}
-				else
-				{
-					nums[i] = temp;
-					loop = false;
-				}
+				loop = false;
+				nums[temp] = i;
 			}
 		}
 	}
 
-	for (int i = 0; i < 10; ++i)
-	{
-		printf("%d\t", nums[i]);
-	}
-	printf("\n");
-
+	printf("찾을 숫자 입력 0~9 : ");
 	int input;
 	scanf_s("%d", &input);
+	int loop = -1;
+
+	printf("\n");
+	while (input != nums[++loop])
+	{
+		printf("nums %d번째 번호는 %d, %d와 다릅니다.\n", loop + 1, nums[loop], input);
+	}
+	printf("\nnums %d번쨰 번호는 %d, %d와 같습니다.\n", loop + 1, nums[loop], input);
 }

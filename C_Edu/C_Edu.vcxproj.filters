@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\add_comment">
+      <UniqueIdentifier>{6b217fd7-4458-453d-acbe-0bd7152fc9e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -42,6 +45,21 @@
     <ClCompile Include="07_loop.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="08_function.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="09_static.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10_extern_2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10_extern_1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11_recursion_func.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="01_printf().h">
@@ -66,6 +84,18 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="07_loop.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="08_function.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="09_static.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="10_extern_1.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="11_recursion_func.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

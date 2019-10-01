@@ -45,14 +45,16 @@ void play_03()
 	}
 }
 
+//함수 이름대로 입력받은 두수를 더하는 함수다.
 void add()
 {
 	int input_a, input_b;												//입력 받아 저장할 변수
 	printf("정수 2개 입력. 공백또는 엔터로 구분. : ");
 	scanf_s("%d %d", &input_a, &input_b);								//정수 2개 입력
-	printf("%d + %d = %d", input_a, input_b, input_a + input_b);	//결과 출력
+	printf("%d + %d = %d", input_a, input_b, input_a + input_b);		//결과 출력
 }
 
+//윈의 면적을 구하는 함수다.
 void calculate_area_circle()
 {
 	float input_r;
@@ -63,13 +65,14 @@ void calculate_area_circle()
 	printf("원의 면적은 %f\n", input_r * input_r * 3.1415);
 }
 
+//환율 계산기이다.
 void exchange_rate()
 {
 	float rate;						//원/달러 환율
 	int money;						//돈
 
 	printf("환율을 입력하세요. : ");
-	scanf_s("%f",&rate);			//입력된 값이 변질되는데 이유를 모르겠음
+	scanf_s("%f",&rate);			//float라고해도 입력 받으면 받은 값이 들어가야할텐데 정수는 실수든 값에 오류가 생긴다. 이유불명. 메모리가 손상됬을지도
 
 	printf("원화를 입력하세요. : ");
 	scanf_s("%d", &money);
@@ -77,6 +80,7 @@ void exchange_rate()
 	printf("원화 %d는 달러 %f입니다.\n", money, money / rate);
 }
 
+//사각형 둘레와 넓이 계산함수다. 이름이 너무 길어져서 정보 출력이라고 지었다.
 void show_rect_info()
 {
 	int input_w, input_h;
@@ -85,6 +89,7 @@ void show_rect_info()
 
 	printf("둘레는 %d이고 넓이는 %d입니다.\n", calculate_perimeter_rect(input_w, input_h),calculate_area_rect(input_w, input_h));
 }
+
 
 int calculate_perimeter_rect(int w, int h)
 {
