@@ -15,3 +15,5 @@ void bit_op();
 void sp_skill_op();
 void switch_value_notemp();
 void check_odd_or_even();
+void test_compound_assignment_op_performance();
+void test_incdec_performance();

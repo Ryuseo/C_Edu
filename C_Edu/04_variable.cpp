@@ -208,45 +208,45 @@ void output_data_type_max_n_min()
 		}
 		else if (input_num == 7)
 		{
-		unsigned char max_min[2] = { USHRT_MAX, 0 };
-		unsigned char n_num = 1, p_num = 1;	//최댓값과 최솟값을 구하기 위한 변수
-		unsigned char n_plus = 1;
-		unsigned char p_plus = 0;
-		bool loop = true;					//반복문 사용
+			unsigned char max_min[2] = { USHRT_MAX, 0 };
+			unsigned char n_num = 1, p_num = 1;	//최댓값과 최솟값을 구하기 위한 변수
+			unsigned char n_plus = 1;
+			unsigned char p_plus = 0;
+			bool loop = true;					//반복문 사용
 
-		//재귀함수로 하려다가 그냥 반복문으로 함. 덕분에 코드가 쓸데없이 길어짐. 포인터 들어가면 재귀함수로 바꿀까?
-		//long long 출력이 이상하게 돼서 이걸로 직접 찾으려고 했는데 알고보니 %d가 아닌 %lld를 사용해야했던 문제;;;
-		while (loop)						
-		{
+			//재귀함수로 하려다가 그냥 반복문으로 함. 덕분에 코드가 쓸데없이 길어짐. 포인터 들어가면 재귀함수로 바꿀까?
+			//long long 출력이 이상하게 돼서 알아보니 %d가 아닌 %lld를 사용해야했던 문제;;;
+			while (loop)
+			{
 
-			n_num -= n_plus;
-			if (n_num < p_num && n_plus > p_plus)
-			{
-				p_plus = n_plus;
-				n_plus *= 10;
-				if (n_plus < 0)
+				n_num -= n_plus;
+				if (n_num < p_num && n_plus > p_plus)
 				{
-					n_plus = p_plus;
-				}
-			}
-			else if (n_num > p_num)			// 언더플로우가 나면 n_num이 p_num보다 커짐
-			{
-				if (n_plus == 1)
-				{
-					loop = false;
-					max_min[1] = p_num;
-				}
-				else
-				{
-					n_num = p_num;
 					p_plus = n_plus;
-					n_plus /= 10;
+					n_plus *= 10;
+					if (n_plus < 0)
+					{
+						n_plus = p_plus;
+					}
 				}
+				else if (n_num > p_num)			// 언더플로우가 나면 n_num이 p_num보다 커짐
+				{
+					if (n_plus == 1)
+					{
+						loop = false;
+						max_min[1] = p_num;
+					}
+					else
+					{
+						n_num = p_num;
+						p_plus = n_plus;
+						n_plus /= 10;
+					}
+				}
+				p_num = n_num;
 			}
-			p_num = n_num;
-		}
 
-		printf("unsigned char의 최댓값는 %u, 최솟값은 %u\n", max_min[0], max_min[1]);	//unsigned는 %u를 사용
+			printf("unsigned char의 최댓값는 %u, 최솟값은 %u\n", max_min[0], max_min[1]);	//unsigned는 %u를 사용
 		}
 		else if (input_num == 8)
 		{
@@ -634,7 +634,7 @@ void output_data_type_max_n_min()
 //상수
 void constant()
 {
-	const int months = 12;								//const 상수
+	const int months = 12;								//const 상수. 값을 바꿀 수 없다.
 	int m_salaray, y_salary;
 
 	printf("월급을 입력하시요 : ");
@@ -642,15 +642,15 @@ void constant()
 
 	y_salary = months * m_salaray;
 	printf("연봉은 %d입니다.\n", y_salary);
-	printf("세금은 %f입니다.\n", y_salary * TAX_RATE);	//전처리기 상수
+	printf("세금은 %f입니다.\n", y_salary * TAX_RATE);	//전처리기 상수. 맨 위에 있다.
 }
 
 //아스키코드와 숫자출력
 void Ascii_n_number()
 {
 	printf("숫자와 대응하는 아스키 코드 출력\n");
-	for (char i = 0; i >= 0; ++i)				//127번째 아스키 코드를 출력하기 위한 방법 i < 128 이나 i <= 127하면 오버플로우 나면서 무한 루프 돈다.
-	{
+	for (char i = 0; i >= 0; ++i)				//127번째 아스키 코드를 출력하기 위한 편법. i < 128 이나 i <= 127하면 오버플로우 나면서 무한 루프 돈다.
+	{											//i++이면 되지 않을까? 했지만 안됬다.
 		printf("%d : '%c'\n", i, i);
 	}
 }

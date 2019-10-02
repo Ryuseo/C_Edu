@@ -87,15 +87,17 @@ void show_rect_info()
 	printf("사각형의 너비와 높이를 입력하세요. 공백으로 구분합니다. : ");
 	scanf_s("%d %d", &input_w, &input_h);
 
+	//함수에서 값을 반환하므로 직접 넘겨주고 있다.
 	printf("둘레는 %d이고 넓이는 %d입니다.\n", calculate_perimeter_rect(input_w, input_h),calculate_area_rect(input_w, input_h));
 }
 
-
+//사각형의 둘레를 구하는 함수
 int calculate_perimeter_rect(int w, int h)
 {
 	return 2 * (w + h);
 }
 
+//사각형의 넓이를 구하는 함수
 int calculate_area_rect(int w, int h)
 {
 	return w * h;
