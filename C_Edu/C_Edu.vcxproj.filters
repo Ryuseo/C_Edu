@@ -16,86 +16,104 @@
     <Filter Include="소스 파일\add_comment">
       <UniqueIdentifier>{6b217fd7-4458-453d-acbe-0bd7152fc9e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\complete">
+      <UniqueIdentifier>{fbb0ad2e-2b06-40b8-aec8-ecb380a30776}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="01_printf().cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="02_Warmnig_Up.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="템플릿.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="09_static.cpp">
+      <Filter>소스 파일\add_comment</Filter>
+    </ClCompile>
+    <ClCompile Include="01_printf().cpp">
+      <Filter>소스 파일\add_comment</Filter>
+    </ClCompile>
+    <ClCompile Include="02_Warmnig_Up.cpp">
+      <Filter>소스 파일\add_comment</Filter>
+    </ClCompile>
     <ClCompile Include="03_scanf_s%28%29.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\add_comment</Filter>
     </ClCompile>
     <ClCompile Include="04_variable.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\add_comment</Filter>
     </ClCompile>
     <ClCompile Include="05_math.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\add_comment</Filter>
     </ClCompile>
     <ClCompile Include="06_if_n_switch.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\add_comment</Filter>
     </ClCompile>
     <ClCompile Include="07_loop.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\add_comment</Filter>
     </ClCompile>
     <ClCompile Include="08_function.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="09_static.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\add_comment</Filter>
     </ClCompile>
     <ClCompile Include="10_extern_2.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\add_comment</Filter>
     </ClCompile>
     <ClCompile Include="10_extern_1.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\add_comment</Filter>
     </ClCompile>
     <ClCompile Include="11_recursion_func.cpp">
+      <Filter>소스 파일\add_comment</Filter>
+    </ClCompile>
+    <ClCompile Include="12_array.cpp">
+      <Filter>소스 파일\add_comment</Filter>
+    </ClCompile>
+    <ClCompile Include="13_pointer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="01_printf().h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="02_Warmnig_Up.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="템플릿.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="03_scanf_s%28%29.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="04_variable.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="05_math.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="06_if_n_switch.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="07_loop.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="08_function.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="09_static.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="10_extern_1.h">
+    <ClInclude Include="library.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="11_recursion_func.h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="01_printf().h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="02_Warmnig_Up.h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="03_scanf_s%28%29.h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="04_variable.h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="05_math.h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="06_if_n_switch.h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="07_loop.h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="08_function.h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="09_static.h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="10_extern_1.h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="12_array.h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="13_pointer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

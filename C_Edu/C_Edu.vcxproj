@@ -137,6 +137,8 @@
     <ClCompile Include="10_extern_1.cpp" />
     <ClCompile Include="10_extern_2.cpp" />
     <ClCompile Include="11_recursion_func.cpp" />
+    <ClCompile Include="12_array.cpp" />
+    <ClCompile Include="13_pointer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="템플릿.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -157,6 +159,9 @@
     <ClInclude Include="09_static.h" />
     <ClInclude Include="10_extern_1.h" />
     <ClInclude Include="11_recursion_func.h" />
+    <ClInclude Include="12_array.h" />
+    <ClInclude Include="13_pointer.h" />
+    <ClInclude Include="library.h" />
     <ClInclude Include="템플릿.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>

@@ -2,8 +2,9 @@
 
 unsigned random_i();
 double random_f();
-extern unsigned call_count;
+extern unsigned call_count;	//extern으로 외부파일에서 접근이 가능해졌다.
 
+//static 예제와 동일하게 extern을 다루기 위해 구성이 바뀐 예제이다.
 void play_10()
 {
 	printf("extern 관련 예제\n\n");

@@ -3,10 +3,39 @@
 #define FAIL 2
 #define LIMIT 3
 
-//static을 위해서 만들었다. extern까지는 기존 예제프로그램과는 구성이 많이 다르게 되있다.
+static int static_g_num = 0;
+
 void play_09()
 {
-	login();
+	int num;
+	int play = 1;
+
+	printf(" 관련 예제\n\n");
+
+	while (play)
+	{
+		printf("1. 로그인 예제\n");
+		printf("\n");
+		printf("실행할 예제 번호 입력.(다른 프로그램 실행은 0번) : ");
+		scanf_s("%d", &num);
+
+		system("cls");
+
+		switch (num)
+		{
+		case 0:
+			play = 0;
+			printf("종료.");
+			break;
+		case 1:
+			login();
+			break;
+		default:
+			printf("없는 예문. 다시 입력");
+			break;
+		}
+		printf("\n\n");
+	}
 }
 
 void login()
@@ -33,8 +62,8 @@ int check(int id, int password)
 	static int try_count = 0;			
 
 	try_count++;
-	if (try_count >= LIMIT)				//static이기에 의미가 있다. 그냥 지역변수였다면 의미없는 변수
-	{
+	if (try_count >= LIMIT)				//static이기에 의미가 있다. 그냥 지역변수였다면 의미없는 if문
+	{									//그냥 지역변수였다면 함수를 나가면 try_count 변수는 사라지고 다시 함수가 실행됬을때 새로운 초기화된 변수가 되었을 것이다.
 		printf("횟수 초과\n");
 		exit(1);
 	}
