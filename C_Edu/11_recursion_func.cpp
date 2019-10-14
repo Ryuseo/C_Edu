@@ -5,7 +5,7 @@ void play_11()
 	int num;
 	int play = 1;
 
-	printf(" 관련 예제\n\n");
+	printf("재귀함수 관련 예제\n\n");
 
 	while (play)
 	{
@@ -33,7 +33,7 @@ void play_11()
 	}
 }
 
-//유명한 하노이의 탑 문제
+// 유명한 하노이의 탑 문제
 void hanoi()
 {
 	int input_n;
@@ -42,16 +42,16 @@ void hanoi()
 	recursion(input_n, 'A', 'B', 'C');
 }
 
-//자기가 자기자신을 부르는 함수
+// 자기가 자기자신을 부르는 함수
 void recursion(int n, char from, char tmp, char to)
 {
-	if (n == 1)								//탈출 조건 반환형이 void라 return은 없다?
+	if (n == 1)								// 탈출 조건 반환형이 void라 return은 없다?
 	{
 		printf("원판 1을 %c에서 %c으로 옮긴다.\n", from, to);
 	}
 	else
 	{
-		recursion(n - 1, from, to, tmp);	//자기가 자신을 부르고 있다.
+		recursion(n - 1, from, to, tmp);	// 자기가 자신을 부르고 있다.
 		printf("원판 %d을 %c에서 %c으로 옮긴다.\n",n, from, to);
 		recursion(n - 1, tmp, from, to);
 	}

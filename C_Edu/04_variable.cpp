@@ -45,7 +45,7 @@ void play_04()
 	}
 }
 
-//각 자료형과 변수,상수의 크기 비교
+// 각 자료형과 변수,상수의 크기 비교
 void use_sizeof()
 {
 	bool play = true;			// 루프를 반복할지 말지 정하는 변수
@@ -143,7 +143,7 @@ void use_sizeof()
 	}
 }
 
-//각 자료형의 최댓값 최솟값 출력
+// 각 자료형의 최댓값 최솟값 출력
 void output_data_type_max_n_min()
 {
 	bool play = true;			// 루프를 반복할지 말지 정하는 변수
@@ -182,8 +182,8 @@ void output_data_type_max_n_min()
 		}
 		else if (input_num == 2)
 		{
-			bool max_min[2] = { 1,0 };	//예전에는 char같이 1바이트 정수로 쓸수 있었던걸로 기억하지만 지금은 안된다.
-										//어차피 bool은 true, false로 쓰는 용도니 이상한 값 넣지 말자.
+			bool max_min[2] = { 1,0 };	// 예전에는 char같이 1바이트 정수로 쓸수 있었던걸로 기억하지만 지금은 안된다.
+										// 어차피 bool은 true, false로 쓰는 용도니 이상한 값 넣지 말자.
 			printf("bool의 최댓값는 %d, 최솟값은 %d\n", max_min[0], max_min[1]);
 		}
 		else if (input_num == 3)
@@ -204,18 +204,18 @@ void output_data_type_max_n_min()
 		else if (input_num == 6)
 		{
 			long long max_min[2] = { LLONG_MAX , LLONG_MIN };
-			printf("long long의 최댓값는 %lld, 최솟값은 %lld\n", max_min[0], max_min[1]);	//long long는 %d를 사용하면 제대로된 값이 나오지 않을 수 있다.
+			printf("long long의 최댓값는 %lld, 최솟값은 %lld\n", max_min[0], max_min[1]);	// long long는 %d를 사용하면 제대로된 값이 나오지 않을 수 있다.
 		}
 		else if (input_num == 7)
 		{
 			unsigned char max_min[2] = { USHRT_MAX, 0 };
-			unsigned char n_num = 1, p_num = 1;	//최댓값과 최솟값을 구하기 위한 변수
+			unsigned char n_num = 1, p_num = 1;	// 최댓값과 최솟값을 구하기 위한 변수
 			unsigned char n_plus = 1;
 			unsigned char p_plus = 0;
-			bool loop = true;					//반복문 사용
+			bool loop = true;					// 반복문 사용
 
-			//재귀함수로 하려다가 그냥 반복문으로 함. 덕분에 코드가 쓸데없이 길어짐. 포인터 들어가면 재귀함수로 바꿀까?
-			//long long 출력이 이상하게 돼서 알아보니 %d가 아닌 %lld를 사용해야했던 문제;;;
+			// 재귀함수로 하려다가 그냥 반복문으로 함. 덕분에 코드가 쓸데없이 길어짐. 포인터 들어가면 재귀함수로 바꿀까?
+			// long long 출력이 이상하게 돼서 알아보니 %d가 아닌 %lld를 사용해야했던 문제;;;
 			while (loop)
 			{
 
@@ -246,15 +246,15 @@ void output_data_type_max_n_min()
 				p_num = n_num;
 			}
 
-			printf("unsigned char의 최댓값는 %u, 최솟값은 %u\n", max_min[0], max_min[1]);	//unsigned는 %u를 사용
+			printf("unsigned char의 최댓값는 %u, 최솟값은 %u\n", max_min[0], max_min[1]);	// unsigned는 %u를 사용
 		}
 		else if (input_num == 8)
 		{
 			unsigned short max_min[2] = { USHRT_MAX, 0 };
-			unsigned short n_num = 1, p_num = 1;	//최댓값과 최솟값을 구하기 위한 변수
+			unsigned short n_num = 1, p_num = 1;	// 최댓값과 최솟값을 구하기 위한 변수
 			unsigned short n_plus = 1;
 			unsigned short p_plus = 0;
-			bool loop = true;				//반복문 사용
+			bool loop = true;				// 반복문 사용
 
 			while (loop)
 			{
@@ -290,10 +290,10 @@ void output_data_type_max_n_min()
 		else if (input_num == 9)
 		{
 			unsigned int max_min[2] = { USHRT_MAX, 0 };
-			unsigned int n_num = 1, p_num = 1;	//최댓값과 최솟값을 구하기 위한 변수
+			unsigned int n_num = 1, p_num = 1;	// 최댓값과 최솟값을 구하기 위한 변수
 			unsigned int n_plus = 1;
 			unsigned int p_plus = 0;
-			bool loop = true;				//반복문 사용
+			bool loop = true;				// 반복문 사용
 
 			while (loop)
 			{
@@ -329,10 +329,10 @@ void output_data_type_max_n_min()
 		else if (input_num == 10)
 		{
 			unsigned long max_min[2] = { USHRT_MAX, 0 };
-			unsigned long n_num = 1, p_num = 1;	//최댓값과 최솟값을 구하기 위한 변수
+			unsigned long n_num = 1, p_num = 1;	// 최댓값과 최솟값을 구하기 위한 변수
 			unsigned long n_plus = 1;
 			unsigned long p_plus = 0;
-			bool loop = true;				//반복문 사용
+			bool loop = true;				// 반복문 사용
 
 			while (loop)
 			{
@@ -368,10 +368,10 @@ void output_data_type_max_n_min()
 		else if (input_num == 11)
 		{
 			unsigned long long max_min[2] = { USHRT_MAX, 0 };
-			unsigned long long n_num = 1, p_num = 1;	//최댓값과 최솟값을 구하기 위한 변수
+			unsigned long long n_num = 1, p_num = 1;	// 최댓값과 최솟값을 구하기 위한 변수
 			unsigned long long n_plus = 1;
 			unsigned long long p_plus = 0;
-			bool loop = true;				//반복문 사용
+			bool loop = true;				// 반복문 사용
 
 			while (loop)
 			{
@@ -402,7 +402,7 @@ void output_data_type_max_n_min()
 				}
 				p_num = n_num;
 			}
-			printf("unsigned long long의 최댓값는 %llu, 최솟값은 %llu\n", max_min[0], max_min[1]);	//unsigned long long은 값이 엄청 커서 %llu를 사용
+			printf("unsigned long long의 최댓값는 %llu, 최솟값은 %llu\n", max_min[0], max_min[1]);	// unsigned long long은 값이 엄청 커서 %llu를 사용
 		}
 		else if (input_num == 12)
 		{
@@ -411,8 +411,8 @@ void output_data_type_max_n_min()
 				printf("char의 최댓값는 %d, 최솟값은 %d\n", max_min[0], max_min[1]);
 			}
 			{
-				bool max_min[2] = { 1,0 };	//예전에는 char같이 1바이트 정수로 쓸수 있었던걸로 기억하지만 지금은 안된다.
-											//하지만 bool은 true, false로 쓰는 용도니 이상한 값 넣지 말자.
+				bool max_min[2] = { 1,0 };	// 예전에는 char같이 1바이트 정수로 쓸수 있었던걸로 기억하지만 지금은 안된다.
+											// 하지만 bool은 true, false로 쓰는 용도니 이상한 값 넣지 말자.
 				printf("bool의 최댓값는 %d, 최솟값은 %d\n", max_min[0], max_min[1]);
 			}
 			{
@@ -433,10 +433,10 @@ void output_data_type_max_n_min()
 			}
 			{
 				unsigned char max_min[2] = { USHRT_MAX, 0 };
-				unsigned char n_num = 1, p_num = 1;	//최댓값과 최솟값을 구하기 위한 변수
+				unsigned char n_num = 1, p_num = 1;	// 최댓값과 최솟값을 구하기 위한 변수
 				unsigned char n_plus = 1;
 				unsigned char p_plus = 0;
-				bool loop = true;				//반복문 사용
+				bool loop = true;				// 반복문 사용
 
 				while (loop)
 				{
@@ -472,10 +472,10 @@ void output_data_type_max_n_min()
 			}
 			{
 				unsigned short max_min[2] = { USHRT_MAX, 0 };
-				unsigned short n_num = 1, p_num = 1;	//최댓값과 최솟값을 구하기 위한 변수
+				unsigned short n_num = 1, p_num = 1;	// 최댓값과 최솟값을 구하기 위한 변수
 				unsigned short n_plus = 1;
 				unsigned short p_plus = 0;
-				bool loop = true;				//반복문 사용
+				bool loop = true;				// 반복문 사용
 
 				while (loop)
 				{
@@ -510,10 +510,10 @@ void output_data_type_max_n_min()
 			}
 			{
 				unsigned int max_min[2] = { USHRT_MAX, 0 };
-				unsigned int n_num = 1, p_num = 1;	//최댓값과 최솟값을 구하기 위한 변수
+				unsigned int n_num = 1, p_num = 1;	// 최댓값과 최솟값을 구하기 위한 변수
 				unsigned int n_plus = 1;
 				unsigned int p_plus = 0;
-				bool loop = true;				//반복문 사용
+				bool loop = true;				// 반복문 사용
 
 				while (loop)
 				{
@@ -548,10 +548,10 @@ void output_data_type_max_n_min()
 			}
 			{
 				unsigned long max_min[2] = { USHRT_MAX, 0 };
-				unsigned long n_num = 1, p_num = 1;	//최댓값과 최솟값을 구하기 위한 변수
+				unsigned long n_num = 1, p_num = 1;	// 최댓값과 최솟값을 구하기 위한 변수
 				unsigned long n_plus = 1;
 				unsigned long p_plus = 0;
-				bool loop = true;				//반복문 사용
+				bool loop = true;				// 반복문 사용
 
 				while (loop)
 				{
@@ -586,10 +586,10 @@ void output_data_type_max_n_min()
 			}
 			{
 				unsigned long long max_min[2] = { ULLONG_MAX, 0 };
-				unsigned long long n_num = 1, p_num = 1;	//최댓값과 최솟값을 구하기 위한 변수
+				unsigned long long n_num = 1, p_num = 1;	// 최댓값과 최솟값을 구하기 위한 변수
 				unsigned long long n_plus = 1;
 				unsigned long long p_plus = 0;
-				bool loop = true;				//반복문 사용
+				bool loop = true;				// 반복문 사용
 
 				while (loop)
 				{
@@ -631,10 +631,10 @@ void output_data_type_max_n_min()
 	}
 }
 
-//상수
+// 상수
 void constant()
 {
-	const int months = 12;								//const 상수. 값을 바꿀 수 없다.
+	const int months = 12;								// const 상수. 값을 바꿀 수 없다.
 	int m_salaray, y_salary;
 
 	printf("월급을 입력하시요 : ");
@@ -642,15 +642,15 @@ void constant()
 
 	y_salary = months * m_salaray;
 	printf("연봉은 %d입니다.\n", y_salary);
-	printf("세금은 %f입니다.\n", y_salary * TAX_RATE);	//전처리기 상수. 맨 위에 있다.
+	printf("세금은 %f입니다.\n", y_salary * TAX_RATE);	// 전처리기 상수. 맨 위에 있다.
 }
 
-//아스키코드와 숫자출력
+// 아스키코드와 숫자출력
 void Ascii_n_number()
 {
 	printf("숫자와 대응하는 아스키 코드 출력\n");
-	for (char i = 0; i >= 0; ++i)				//127번째 아스키 코드를 출력하기 위한 편법. i < 128 이나 i <= 127하면 오버플로우 나면서 무한 루프 돈다.
-	{											//i++이면 되지 않을까? 했지만 안됬다.
+	for (char i = 0; i >= 0; ++i)				// 127번째 아스키 코드를 출력하기 위한 편법. i < 128 이나 i <= 127하면 오버플로우 나면서 무한 루프 돈다.
+	{											// i++이면 되지 않을까? 했지만 안됬다.
 		printf("%d : '%c'\n", i, i);
 	}
 }

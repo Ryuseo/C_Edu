@@ -10,7 +10,7 @@ void play_09()
 	int num;
 	int play = 1;
 
-	printf(" 관련 예제\n\n");
+	printf("static 관련 예제\n\n");
 
 	while (play)
 	{
@@ -57,13 +57,13 @@ void login()
 
 int check(int id, int password)
 {
-	static int super_id = 1234;			//함수를 벗어나도 다른 지역변수처럼 값이 없어지지 않고 남아있는다.
+	static int super_id = 1234;			// 함수를 벗어나도 다른 지역변수처럼 값이 없어지지 않고 남아있는다.
 	static int super_password = 5678;
 	static int try_count = 0;			
 
 	try_count++;
-	if (try_count >= LIMIT)				//static이기에 의미가 있다. 그냥 지역변수였다면 의미없는 if문
-	{									//그냥 지역변수였다면 함수를 나가면 try_count 변수는 사라지고 다시 함수가 실행됬을때 새로운 초기화된 변수가 되었을 것이다.
+	if (try_count >= LIMIT)				// static이기에 의미가 있다. 그냥 지역변수였다면 의미없는 if문
+	{									// 그냥 지역변수였다면 함수를 나가면 try_count 변수는 사라지고 다시 함수가 실행됬을때 새로운 초기화된 변수가 되었을 것이다.
 		printf("횟수 초과\n");
 		exit(1);
 	}
