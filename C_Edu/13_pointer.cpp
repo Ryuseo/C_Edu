@@ -10,10 +10,13 @@ void play_13()
 
 	while (play)
 	{
-		printf("1. 변수 주소 출력\n");
-		printf("2. 포인터 변수로 값 출력\n");
-		printf("3. 포인터가 가리키는 주소 변경\n");
-		printf("4. 포인터로 값 변경\n");
+		printf("1. 변수 주소 출력 예제\n");
+		printf("2. 포인터 변수로 값 출력 예제\n");
+		printf("3. 포인터가 가리키는 주소 변경 예제\n");
+		printf("4. 포인터로 값 변경 예제\n");
+		printf("5. 배열과 포인터의 관계 예제\n");
+		printf("6. 배열를 포인터 간접참조로 값 읽어내기 예제\n");
+		printf("7. 배열를 함수에 넘기고 간접참조로 값 읽어내기 예제\n");
 		printf("\n");
 		printf("실행할 예제 번호 입력.(다른 프로그램 실행은 0번) : ");
 		scanf_s("%d", &num);
@@ -37,6 +40,19 @@ void play_13()
 			break;
 		case 4:
 			pointer_02();
+			break;
+		case 5:
+			pointer_array_01();
+			break;
+		case 6:
+			pointer_array_02();
+			break;
+		case 7:
+			array_pointer_para();
+			break;
+		case 8:
+			break;
+		case 9:
 			break;
 		default:
 			printf("없는 예문. 다시 입력");
@@ -76,6 +92,7 @@ void print_address()
 	printf("d의 주소 : %p\n", dp);
 }
 
+// 포인터가 가진 주소의 값 출력하는 함수
 void print_value()
 {
 	int i = 10;
@@ -107,7 +124,7 @@ void print_value()
 	printf("d의 주소 : %f\n", *dp);
 }
 
-// 1,2번 합친 예제
+// 포인터에 새로운 주소를 대입하는 함수
 void pointer_01()
 {
 	int v_01 = 10, v_02 = 20;
@@ -172,3 +189,75 @@ void pointer_02()
 	printf("*p = %d\n", *p);
 	printf("p = %p\n", p);
 }
+
+// 배열의 첫번째 원소의 주소와 배열의 이름이 같음(?)을 증명하는 함수
+// 뭔가 설명하기 애매하다.
+// 결론은 배열의 이름은 배열 0번 원소를 가리키는 포인터라는 거다.
+void pointer_array_01()
+{
+	int a[] = { 10, 20, 30, 40, 50 };
+
+	for (int i = 0; i < 5; ++i)
+	{
+		printf("&a[%d] = %p\n",i, &a[i]);
+	}
+	printf("\n");
+
+	printf("a = %p\n\n", a);
+
+	if (&a[0] == a)
+	{
+		printf("a[0]의 주소와 a는 동일하다.\n");
+	}
+}
+
+// 배열을 포인터 간접참조으로 출력하기
+// 슬슬 링크드리스트가 머리에서 아른아른해진다. 자료구조책을 찾아보자.
+// 얼른 c++까지 하고 자료구조도 해야지.
+// 링크드리스트... 포인터 8개... 오목... 아 머리가....
+void pointer_array_02()
+{
+	int a[] = { 10, 20, 30, 40, 50 };
+
+	for (int i = 0; i < 5; ++i)
+	{
+		printf("a[%d] = %d\n", i, a[i]);
+	}
+	printf("\n");
+
+	for (int i = 0; i < 5; ++i)
+	{
+		printf("*(a + %d) = %d\n", i, *(a + i));
+	}
+}
+
+//배열을 매개변수로 받고 그 배열을 포인터로 읽어내는 함수의 메인함수에서 호출용
+void array_pointer_para()
+{
+	int a[] = { 10,20,30,40,50 };
+	int n = 5;
+
+	printf("함수에 넘기기 전 배열 출력 : \n");
+
+	for (int i = 0; i < n; ++i)
+	{
+		printf("a[%d] = %d\n", i, a[i]);
+	}
+
+	printf("\n");
+
+	array_pointer_para_sub(a, n);
+}
+
+//배열을 매개변수로 받고 그 배열을 포인터로 읽어내는 함수의 본체
+void array_pointer_para_sub(int a[], int n)
+{
+	printf("함수로 넘겨 받은후 출력 : \n");
+
+	for (int i = 0; i < n; ++i)
+	{
+		printf("*(a + %d) = %d\n", i, *(a + i));
+	}
+}
+
+//

@@ -26,6 +26,20 @@ void play_01()
 			break;
 		case 2:
 			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
+		case 7:
+			break;
+		case 8:
+			break;
+		case 9:
+			break;
 		default:
 			printf("없는 예문. 다시 입력");
 			break;
