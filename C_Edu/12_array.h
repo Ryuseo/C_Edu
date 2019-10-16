@@ -8,4 +8,4 @@ void play_12();
 void random_meat_info();
 void random_num_gene();
 void array_to_func();
-void recive_array(int a[], int size);
+void recive_array(int a[], const int size);

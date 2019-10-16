@@ -57,7 +57,7 @@ void add()
 // 윈의 면적을 구하는 함수다.
 void calculate_area_circle()
 {
-	float input_r;
+	double input_r;
 
 	printf("구할 원의 반지름을 입력하시오. : ");
 	scanf_s("%f", &input_r);
@@ -92,13 +92,13 @@ void show_rect_info()
 }
 
 // 사각형의 둘레를 구하는 함수
-int calculate_perimeter_rect(int w, int h)
+int calculate_perimeter_rect(const int w, const int h)
 {
 	return 2 * (w + h);
 }
 
 // 사각형의 넓이를 구하는 함수
-int calculate_area_rect(int w, int h)
+int calculate_area_rect(const int w, const int h)
 {
 	return w * h;
 }

@@ -4,4 +4,4 @@
 
 void play_11();
 void hanoi();
-void recursion(int n, char from, char tmp, char to);
+void recursion(const int n, const char from, const char tmp, const char to);

@@ -67,6 +67,9 @@
       <Filter>소스 파일\add_comment</Filter>
     </ClCompile>
     <ClCompile Include="13_pointer.cpp">
+      <Filter>소스 파일\add_comment</Filter>
+    </ClCompile>
+    <ClCompile Include="14_string.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -114,6 +117,9 @@
       <Filter>헤더 파일\complete</Filter>
     </ClInclude>
     <ClInclude Include="13_pointer.h">
+      <Filter>헤더 파일\complete</Filter>
+    </ClInclude>
+    <ClInclude Include="14_string.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

@@ -94,7 +94,7 @@ void array_to_func()
 }
 
 // 보낸 배열을 받는 함수
-void recive_array(int a[], int size)
+void recive_array(int a[], const int size)
 {
 	printf("받은 배열 내용 : ");
 	for (int i = 0; i < size; ++i)								// 받은 내용 확인

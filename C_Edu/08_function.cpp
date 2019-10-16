@@ -47,7 +47,7 @@ void func()
 	printf("%d를 반환 받았습니다.", recive);
 }
 
-int add(int a, int b)
+int add(const int a, const int b)
 {
 	return a + b;
 }

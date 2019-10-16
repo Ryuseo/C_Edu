@@ -35,7 +35,7 @@ void print_start()
 }
 
 // 계산하는 함수. op입력이 참 힘들었다.
-void calculate(float a, float b, char op)
+void calculate(float a, const float b, const char op)
 {
 	switch (op)
 	{

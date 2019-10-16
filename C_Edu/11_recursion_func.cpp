@@ -43,7 +43,7 @@ void hanoi()
 }
 
 // 자기가 자기자신을 부르는 함수
-void recursion(int n, char from, char tmp, char to)
+void recursion(const int n, const char from, const char tmp, const char to)
 {
 	if (n == 1)								// 탈출 조건 반환형이 void라 return은 없다?
 	{

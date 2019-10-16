@@ -4,4 +4,4 @@
 
 void play_09();
 void login();
-int check(int id, int password);
+int check(const int id, const int password);

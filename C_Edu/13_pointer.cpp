@@ -17,6 +17,8 @@ void play_13()
 		printf("5. 배열과 포인터의 관계 예제\n");
 		printf("6. 배열를 포인터 간접참조로 값 읽어내기 예제\n");
 		printf("7. 배열를 함수에 넘기고 간접참조로 값 읽어내기 예제\n");
+		printf("8. 포인터로 참조에 의한 호출 구현 예제\n");
+
 		printf("\n");
 		printf("실행할 예제 번호 입력.(다른 프로그램 실행은 0번) : ");
 		scanf_s("%d", &num);
@@ -51,8 +53,7 @@ void play_13()
 			array_pointer_para();
 			break;
 		case 8:
-			break;
-		case 9:
+			call_of_ref();
 			break;
 		default:
 			printf("없는 예문. 다시 입력");
@@ -231,7 +232,7 @@ void pointer_array_02()
 	}
 }
 
-//배열을 매개변수로 받고 그 배열을 포인터로 읽어내는 함수의 메인함수에서 호출용
+// 배열을 매개변수로 받고 그 배열을 포인터로 읽어내는 함수의 메인함수에서 호출용
 void array_pointer_para()
 {
 	int a[] = { 10,20,30,40,50 };
@@ -249,8 +250,8 @@ void array_pointer_para()
 	array_pointer_para_sub(a, n);
 }
 
-//배열을 매개변수로 받고 그 배열을 포인터로 읽어내는 함수의 본체
-void array_pointer_para_sub(int a[], int n)
+// 배열을 매개변수로 받고 그 배열을 포인터로 읽어내는 함수의 본체
+void array_pointer_para_sub(const int a[], const int n)
 {
 	printf("함수로 넘겨 받은후 출력 : \n");
 
@@ -260,4 +261,19 @@ void array_pointer_para_sub(int a[], int n)
 	}
 }
 
-//
+// c에서는 참조에 의한 호출이 지원되지 않는다.
+// 포인터로 비슷하게 구현한다.
+void call_of_ref()
+{
+	int a = 100, b = 200;
+
+	printf("a = %d, b = %d\n",a ,b);
+	swap(&a, &b);
+	printf("a = %d, b = %d\n", a, b);
+}
+
+// 참조에 의한 호출이 일어나는 함수
+void swap(int* a, int *b)	//포인터로 주소값을 매개변수로 받고 있다.
+{
+	*a ^= *b ^= *a ^= *b;
+}

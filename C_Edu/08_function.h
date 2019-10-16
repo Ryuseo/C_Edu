@@ -5,4 +5,4 @@
 void play_08();
 
 void func();
-int add(int a, int b);
+int add(const int a, const int b);

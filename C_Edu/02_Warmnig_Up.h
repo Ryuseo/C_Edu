@@ -4,4 +4,4 @@
 
 void calculater();
 void print_start();
-void calculate(float a, float b, char op);
+void calculate(float a, const float b, const char op);
