@@ -25,6 +25,7 @@ int main(void)
 		printf("11. 재귀함수 예제 프로그램\n");
 		printf("12. 배열 예제 프로그램\n");
 		printf("13. 포인터 예제 프로그램\n");
+		printf("14. 문자열 예제 프로그램\n");
 		printf("\n");
 		printf("실행할 프로그램 번호 입력 : ");
 
