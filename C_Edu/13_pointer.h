@@ -13,3 +13,4 @@ void array_pointer_para();
 void array_pointer_para_sub(const int a[], const int n);
 void call_of_ref();
 void swap(int* a, int* b);
+void const_int_change_val();

@@ -5,8 +5,6 @@ void play_05()
 	int num;
 	int play = 1;
 
-	srand(time(NULL));
-
 	printf("수식과 연산자 관련 예제\n\n");
 
 	while (play)

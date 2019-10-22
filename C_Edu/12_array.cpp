@@ -2,7 +2,6 @@
 
 void play_12()
 {
-	srand(time(NULL));
 	int num;
 	int play = 1;
 

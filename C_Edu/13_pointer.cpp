@@ -18,6 +18,7 @@ void play_13()
 		printf("6. 배열를 포인터 간접참조로 값 읽어내기 예제\n");
 		printf("7. 배열를 함수에 넘기고 간접참조로 값 읽어내기 예제\n");
 		printf("8. 포인터로 참조에 의한 호출 구현 예제\n");
+		printf("9. const를 붙인 포인터가 가리키는 주소 또는 가리키는 주소의 값을 바꿀 수 있는지 확인하는 예제");
 
 		printf("\n");
 		printf("실행할 예제 번호 입력.(다른 프로그램 실행은 0번) : ");
@@ -54,6 +55,9 @@ void play_13()
 			break;
 		case 8:
 			call_of_ref();
+			break;
+		case 9:
+			const_int_change_val();
 			break;
 		default:
 			printf("없는 예문. 다시 입력");
@@ -276,4 +280,30 @@ void call_of_ref()
 void swap(int* a, int *b)	//포인터로 주소값을 매개변수로 받고 있다.
 {
 	*a ^= *b ^= *a ^= *b;
+}
+
+// 상수포인터(?)로 가리키는 주소나 값을 바꿀수 있는지 확인하기 위해 작성한 함수
+void const_int_change_val()
+{
+	int num_01 = 1;
+	int num_02 = 2;
+	const int* num_p = &num_01;
+
+	printf("num_01's val =\t%d\n", num_01);
+	printf("num_01's add =\t%p\n", &num_01);
+	printf("num_02's val =\t%d\n", num_02);
+	printf("num_02's add =\t%p\n", &num_02);
+	printf("num_p's val =\t%d\n", *num_p);
+	printf("num_p's add =\t%p\n", num_p);
+
+	num_p = &num_02;
+	printf("\nnum_p가 가리키는 주소 변경\n");
+	printf("num_p's val =\t%d\n", *num_p);
+	printf("num_p's add =\t%p\n", num_p);
+	printf("\n하지만 num_p가 가리키는 주소의 값을 바꿀 수 없었다. 빌드오류가 난다.");
+
+	// 포인터에 const가 붙으면 가리키는 대상을 바꿀수 있으나 값은 바꿀수 없는걸 확인 됬다.
+	// 확인을 하고 싶다면 아래 코드의 주석 기호를 제거하고 빌드하면 빌드오류로 알려준다.
+	// *num_p = 12;
+	// 빌드 오류라서 안된다는걸 실행결과로 보여주기가 어렵다.
 }

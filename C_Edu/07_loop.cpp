@@ -5,8 +5,6 @@ void play_07()
 	int num;
 	int play = 1;
 
-	srand(time(NULL));
-
 	printf("반복문 관련 예제\n\n");
 
 	while (play)

@@ -7,6 +7,7 @@ int main(void)
 {
 	int num;
 	int play = 1;
+	srand(time(NULL));
 	while (play)
 	{
 		// 예제 프로그램 설명 출력
