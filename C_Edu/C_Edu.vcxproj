@@ -140,6 +140,7 @@
     <ClCompile Include="12_array.cpp" />
     <ClCompile Include="13_pointer.cpp" />
     <ClCompile Include="14_string.cpp" />
+    <ClCompile Include="15_structure.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="템플릿.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -163,6 +164,7 @@
     <ClInclude Include="12_array.h" />
     <ClInclude Include="13_pointer.h" />
     <ClInclude Include="14_string.h" />
+    <ClInclude Include="15_structure.h" />
     <ClInclude Include="library.h" />
     <ClInclude Include="템플릿.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>

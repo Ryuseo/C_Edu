@@ -27,6 +27,7 @@ int main(void)
 		printf("12. 배열 예제 프로그램\n");
 		printf("13. 포인터 예제 프로그램\n");
 		printf("14. 문자열 예제 프로그램\n");
+		printf("15. 구조체 예제 프로그램\n");
 		printf("\n");
 		printf("실행할 프로그램 번호 입력 : ");
 
@@ -83,6 +84,9 @@ int main(void)
 			break;
 		case 14:
 			play_14();
+			break;
+		case 15:
+			play_15();
 			break;
 		default:	// 예외처리부분 정해진 숫자 이외의 입력은 여기로 처리된다. 이상한값 넣으면 무한루프 돌지만 c는 예외처리하기 힘들어서;;; scanf는 너무 문제가 많이 발생함
 			printf("없는 번호. 다시 입력.\n");
