@@ -13,6 +13,8 @@ void play_15()
 		printf("2. 구조체를 가지는 구조체 예제\n");
 		printf("3. 구조체 포인터와 구조체 예제\n");
 		printf("4. 구조체와 함수 예제\n");
+		printf("5. 유니온(공용체) 예제\n");
+		printf("6. 구조체 안에 유니온 넣기 예제\n");
 		printf("\n");
 		printf("실행할 예제 번호 입력.(다른 프로그램 실행은 0번) : ");
 		scanf_s("%d", &num);
@@ -38,8 +40,10 @@ void play_15()
 			func_N_struct();
 			break;
 		case 5:
+			use_union();
 			break;
 		case 6:
+			choose_between_two_things();
 			break;
 		case 7:
 			break;
@@ -144,6 +148,8 @@ void pointer_N_struct()
 	}
 }
 
+// 함수에 구조체 넘기기
+// 사실 배열 넘기기와 크게 다르지 않다.
 void func_N_struct()
 {
 	year_month_day a = {1,1,1};
@@ -159,12 +165,75 @@ void func_N_struct()
 	printf("a.year = %d\n", a.year);
 }
 
+// 구조체를 받는 함수. 복사판 버전
 void sub_capyfunc_of_func_N_struct(year_month_day a)
 {
 	a.year = 10;
 }
 
+// 구조체를 받는 함수. 원본판 버전
 void sub_movefunc_of_func_N_struct(year_month_day* a)
 {
 	a->year = 20;
+}
+
+// 유니온 예제
+void use_union()
+{
+	uni A;
+	uni B;
+
+	// 같은 공용체이기에 멤버변수중 하나의 값만 저장된다.
+	// 아스키 코드 1은 ┌(정확히는 SOH), 97은 'a'이다
+	printf("A.i = 1 실행\n");
+	A.i = 1;
+	printf("A.i = %d\n", A.i);
+	printf("A.i = %c\n", A.c);
+	printf("\n");
+
+	printf("A.c = 'a' 실행\n");
+	A.c = 'a';
+	printf("A.i = %d\n", A.i);
+	printf("A.i = %c\n", A.c);
+	printf("\n");
+
+	// 서로 다른 공용체라서 값이 바뀌지 않는다.
+	printf("B.i = 2 실행\n");
+	B.i = 2;
+	printf("A.i = %d\n", A.i);
+	printf("A.i = %c\n", A.c);
+	printf("\n");
+
+	printf("B.c = 'b' 실행\n");
+	B.c = 'b';
+	printf("A.i = %d\n", A.i);
+	printf("A.i = %c\n", A.c);
+	printf("\n");
+}
+
+// 구조체 안에 유니온 예제
+void  choose_between_two_things()
+{
+	unistruct test;
+
+	test.A.c = 'a';
+	test.C.A.year = 2020;
+	test.C.A.month = 1;
+	test.C.A.day = 2;
+
+	printf("test.A.c = %c\n", test.A.c);
+	printf("test.A.c = %d\n", test.C.A.year);
+	printf("test.A.c = %d\n", test.C.A.month);
+	printf("test.A.c = %d\n", test.C.A.day);
+
+	printf("\n\ntest.C 재입력\n\n");
+
+	test.C.B.x = 1.0f;
+	test.C.B.y = 2.0f;
+	test.C.B.z = 3.0f;
+
+	printf("test.A.c = %c\n", test.A.c);
+	printf("test.A.c = %f\n", test.C.B.x);
+	printf("test.A.c = %f\n", test.C.B.y);
+	printf("test.A.c = %f\n", test.C.B.z);
 }
