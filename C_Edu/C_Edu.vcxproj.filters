@@ -75,6 +75,9 @@
     <ClCompile Include="15_structure.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="16_adv_pointer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="템플릿.h">
@@ -126,6 +129,9 @@
       <Filter>헤더 파일\complete</Filter>
     </ClInclude>
     <ClInclude Include="15_structure.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="16_adv_pointer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

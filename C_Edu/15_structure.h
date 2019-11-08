@@ -3,7 +3,9 @@
 #include <Windows.h>
 #include <math.h>
 
-// 구조체, 유니온 선언 파트
+enum days { SUN, MON, TUE, WED, THU, FRI, SAT };
+
+// 구조체, 유니온(공용체) 선언 파트
 struct three_D_point_pos
 {
 	double x;
@@ -35,6 +37,7 @@ struct linked_list
 	linked_list* next;
 };
 
+// 유니온(공용체)
 // 메모리를 멤버변수끼리 공유한다.
 // 제일 큰 변수만큼 할당된다.
 // 아래 uni의 경우 int의 8바이트 만큼 할당 될것이다.
@@ -64,4 +67,6 @@ void func_N_struct();
 void sub_capyfunc_of_func_N_struct(year_month_day a);
 void sub_movefunc_of_func_N_struct(year_month_day* a);
 void use_union();
-void choose_between_two_things();;
+void choose_between_two_things();
+void enumeration();
+void typedefine();

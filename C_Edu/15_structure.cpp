@@ -15,6 +15,8 @@ void play_15()
 		printf("4. 구조체와 함수 예제\n");
 		printf("5. 유니온(공용체) 예제\n");
 		printf("6. 구조체 안에 유니온 넣기 예제\n");
+		printf("7. 열거형(이넘) 예제\n");
+		printf("8. typedef 예제\n");
 		printf("\n");
 		printf("실행할 예제 번호 입력.(다른 프로그램 실행은 0번) : ");
 		scanf_s("%d", &num);
@@ -46,10 +48,10 @@ void play_15()
 			choose_between_two_things();
 			break;
 		case 7:
+			enumeration();
 			break;
 		case 8:
-			break;
-		case 9:
+			typedefine();
 			break;
 		default:
 			printf("없는 예문. 다시 입력");
@@ -236,4 +238,43 @@ void  choose_between_two_things()
 	printf("test.A.c = %f\n", test.C.B.x);
 	printf("test.A.c = %f\n", test.C.B.y);
 	printf("test.A.c = %f\n", test.C.B.z);
+}
+
+// 열거형 예제
+void enumeration()
+{
+	const char* days_name[] = { "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday" };
+	days d = WED;
+
+	printf("%d번째 요일은 %s입니다.", d, days_name[d]);
+}
+
+// typedef 예제
+void typedefine()
+{
+	typedef enum { False, True } BOOL;
+
+	BOOL input_b;
+	printf("false 0, true : 1\n");
+	
+	while (true)
+	{
+		scanf_s("%d", &input_b);
+		system("cls");
+
+		if (input_b == False)
+		{
+			printf("\nfalse\n");
+			break;
+		}
+		else if (input_b == True)
+		{
+			printf("\ntrue\n");
+			break;
+		}
+		else
+		{
+			printf("\n잘못된 입력. 재입력.\n");
+		}
+	}
 }
