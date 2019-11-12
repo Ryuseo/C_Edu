@@ -9,7 +9,7 @@ void play_16()
 
 	while (play)
 	{
-		printf("1. \n");
+		printf("1. 더블 포인터 예제\n");
 		printf("\n");
 		printf("실행할 예제 번호 입력.(다른 프로그램 실행은 0번) : ");
 		scanf_s("%d", &num);
@@ -23,6 +23,7 @@ void play_16()
 			printf("종료.");
 			break;
 		case 1:
+			double_pointer();
 			break;
 		case 2:
 			break;
@@ -48,3 +49,50 @@ void play_16()
 	}
 }
 
+// 더블 포인터 예제
+void double_pointer()
+{
+	int i = 100;	// 정수형 변수
+	int* sp = &i;	// i를 가리키는 포인터
+	int** dp = &sp;	// sp를 가리키는 더블 포인터
+
+	printf("int i의 값	: %d\n", i);
+	printf("int i의 주소	: %p\n\n", &i);
+
+	// 포인터의 값은 주소이기에 %p로 출력했다.
+	printf("int* sp의 값	: %p\n", sp);
+	printf("int* sp가 가리키는 주소의 값	: %d\n", *sp);
+	printf("int* sp의 주소	: %p\n\n", &sp);
+
+	printf("int** dp의 값	: %p\n", dp);
+	printf("int** dp가 가리키는 포인터가 가리키는 주소의 값 : %d\n", **dp);
+	printf("int** dp의 주소	: %p\n\n", &dp);
+
+	printf("int i의 주소와 int* sp의 값이 같은가? : ");
+	if (&i == sp) printf("네.\n\n");
+	else printf("아니요.\n\n");
+
+	printf("int* sp의 주소와 int** dp의 값이 같은가? : ");
+	if (&sp == dp) printf("네.\n\n\n");
+	else printf("아니요.\n\n\n");
+
+
+	//이중포인터로 정수형 변수의 값 변경
+	printf("**dp = 200 실행\n\n");
+
+	**dp = 200;
+
+	printf("int i의 값은? : %d\n\n", i);
+
+	printf("int i2 = 300선언. *dp = &i2 실행\n\n");
+	int i2 = 300;
+
+	*dp = &i2;
+
+	printf("int i2의 값	: %d\n", i2);
+	printf("int i2의 주소	: %p\n\n", &i2);
+
+	printf("int* sp의 값	: %p\n", sp);
+	printf("int* sp가 가리키는 주소의 값	: %d\n", *sp);
+	printf("int* sp의 주소	: %p\n\n", &sp);
+}

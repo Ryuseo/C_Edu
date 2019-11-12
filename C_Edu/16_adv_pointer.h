@@ -3,3 +3,4 @@
 #include <Windows.h>
 
 void play_16();
+void double_pointer();
