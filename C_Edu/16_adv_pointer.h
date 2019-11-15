@@ -4,3 +4,4 @@
 
 void play_16();
 void double_pointer();
+void array_pointer();

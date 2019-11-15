@@ -10,7 +10,7 @@ void play_16()
 	while (play)
 	{
 		printf("1. 더블 포인터 예제\n");
-		printf("\n");
+		printf("2. 포인터 배열 예제\n");
 		printf("실행할 예제 번호 입력.(다른 프로그램 실행은 0번) : ");
 		scanf_s("%d", &num);
 
@@ -26,6 +26,7 @@ void play_16()
 			double_pointer();
 			break;
 		case 2:
+			array_pointer();
 			break;
 		case 3:
 			break;
@@ -84,7 +85,7 @@ void double_pointer()
 
 	printf("int i의 값은? : %d\n\n", i);
 
-	printf("int i2 = 300선언. *dp = &i2 실행\n\n");
+	printf("변수 int i2 = 300 선언. *dp = &i2 실행\n\n");
 	int i2 = 300;
 
 	*dp = &i2;
@@ -95,4 +96,28 @@ void double_pointer()
 	printf("int* sp의 값	: %p\n", sp);
 	printf("int* sp가 가리키는 주소의 값	: %d\n", *sp);
 	printf("int* sp의 주소	: %p\n\n", &sp);
+}
+
+// 포인터 배열
+void array_pointer()
+{
+	int ai[7];
+
+	for (int i = 0; i < 7; ++i)
+	{
+		ai[i] = rand() % 100;
+	}
+
+	int* ap[7];
+	for (int i = 0; i < 7; ++i)
+	{
+		ap[i] = &ai[i];
+	}
+
+	for (int i = 0; i < 7; ++i)
+	{
+		printf("ai[%d]의 값 = %d\n", i, ai[i]);
+		printf("ap[%d]의 값 = %d\n", i, *ap[i]);
+		printf("ap[%d]의 주소 = %p\n", i, ap[i]);
+	}
 }
