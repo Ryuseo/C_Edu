@@ -10,7 +10,8 @@ void play_16()
 	while (play)
 	{
 		printf("1. 더블 포인터 예제\n");
-		printf("2. 포인터 배열 예제\n");
+		printf("2. 기본 포인터 배열 예제\n");
+		printf("3. 문자열 포인터 배열 예제\n");
 		printf("실행할 예제 번호 입력.(다른 프로그램 실행은 0번) : ");
 		scanf_s("%d", &num);
 
@@ -29,8 +30,10 @@ void play_16()
 			array_pointer();
 			break;
 		case 3:
+			array_pointer_string();
 			break;
 		case 4:
+			func_pointer();
 			break;
 		case 5:
 			break;
@@ -98,26 +101,63 @@ void double_pointer()
 	printf("int* sp의 주소	: %p\n\n", &sp);
 }
 
-// 포인터 배열
+// 포인터 배열 예제
 void array_pointer()
 {
-	int ai[7];
+	int ai[5];
 
-	for (int i = 0; i < 7; ++i)
+	for (int i = 0; i < 5; ++i)
 	{
 		ai[i] = rand() % 100;
 	}
 
-	int* ap[7];
-	for (int i = 0; i < 7; ++i)
+	int* ap[5];
+	for (int i = 0; i < 5; ++i)
 	{
 		ap[i] = &ai[i];
 	}
 
-	for (int i = 0; i < 7; ++i)
+	for (int i = 0; i < 5; ++i)
 	{
 		printf("ai[%d]의 값 = %d\n", i, ai[i]);
 		printf("ap[%d]의 값 = %d\n", i, *ap[i]);
-		printf("ap[%d]의 주소 = %p\n", i, ap[i]);
+		printf("ai[%d]의 주소 = %p\n", i, &ai[i]);
+		printf("ap[%d]의 주소 = %p\n\n", i, ap[i]);
 	}
+}
+
+// 문자열 포인터 배열 예제(래그드 배열)
+void array_pointer_string()
+{
+	const char* fname[4] = {
+	"apple",
+	"blueberry",
+	"orange",
+	"melon"
+	};
+
+	// fname의 주소는 *fname
+	// fname로도 출력이 되지만 이건 fname[0]의 주소와 동일. 가리키는 주소가 출력된다.
+	printf("fname의 주소    = %p\n\n", *fname);
+
+	printf("fname[%d]의 값 = %s\n", 0, fname[0]);
+	printf("fname[%d]의 주소 = %p\n\n", 0, &fname[0]);	// 
+
+	fname[0] = "parr";
+
+	printf("fname[%d]의 값 = %s\n", 0, fname[0]);
+	printf("fname[%d]의 주소 = %p\n\n", 0, &fname[0]);
+
+	for (int i = 1; i < 4; ++i)
+	{
+		printf("fname[%d]의 값 = %s\n", i, fname[i]);
+		printf("fname[%d]의 주소 = %p\n\n", i, &fname[i]);
+	}
+}
+
+// 배열 포인터라는것도 있지만 생략
+// 함수포인터 예제
+void func_pointer()
+{
+
 }
