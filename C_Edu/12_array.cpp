@@ -41,7 +41,7 @@ void play_12()
 }
 
 // 랜덤으로 고기 정보를 작성하고 출력하는 함수
-void random_meat_info()
+static void random_meat_info()
 {
 	// 다차원 배열
 	char meat[][9] = { { "살치살" }, { "삼겹살" }, { "앞다리살" } };
@@ -53,7 +53,7 @@ void random_meat_info()
 }
 
 // 랜덤한 숫자 5개를 배열에 넣고 그 배열의 숫자를 모두 출력하는 반복문을 이용한 배열 응용 예제
-void random_num_gene()
+static void random_num_gene()
 {
 	int nums[5] = { 0, };
 
@@ -72,7 +72,7 @@ void random_num_gene()
 }
 
 // 함수에게 배열 전달하는 함수 예제
-void array_to_func()
+static void array_to_func()
 {
 	int array_n[3] = { rand() % 10,rand() % 10,rand() % 10 };	// 랜덤으로 초기화
 	printf("보낼 배열 내용 : ");
@@ -93,7 +93,7 @@ void array_to_func()
 }
 
 // 보낸 배열을 받는 함수
-void recive_array(int a[], const int size)
+static void recive_array(int a[], const int size)
 {
 	printf("받은 배열 내용 : ");
 	for (int i = 0; i < size; ++i)								// 받은 내용 확인

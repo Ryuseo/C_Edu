@@ -3,5 +3,5 @@
 #include <Windows.h>
 
 void play_01();
-void print_Hello_World();
-void multi_sentence();
+static void print_Hello_World();
+static void multi_sentence();

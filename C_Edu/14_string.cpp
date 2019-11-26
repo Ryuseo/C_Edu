@@ -57,7 +57,7 @@ void play_14()
 }
 
 // 문자열을 초기화하는 3가지 방법
-void init_string()
+static void init_string()
 {
 	// 선언하면서 초기화를 해주지 않으면 반드시 크기를 명시해야 한다.
 	char string_01[ARRAY_SIZE];
@@ -93,7 +93,7 @@ void init_string()
 }
 
 // 포인터로 문자열 처리하는 예제
-void pointerNstring()
+static void pointerNstring()
 {
 	char string[] = "HelloWorld";
 
@@ -116,7 +116,7 @@ void pointerNstring()
 }
 
 // 문자 입출력 라이브러리 예제
-void text_inoutput_func()
+static void text_inoutput_func()
 {
 	// getchar의 반환형이 int이다. 물론 char로 해도 입력은 받을수 있다.
 	// 문자열이 길어지면 이상하게 출력 될거라고 생각했지만 의외로 정상적으로 출력된다.
@@ -151,7 +151,7 @@ void text_inoutput_func()
 }
 
 // 문자열 입출력 라이브러리 예제
-void string_inoutput_func()
+static void string_inoutput_func()
 {
 	char input_scanf[10] = " ";
 	char input_gets[10] = " ";
@@ -179,7 +179,7 @@ void string_inoutput_func()
 }
 
 // 문자열 처리 라이브러리 예제
-void process_string()
+static void process_string()
 {
 	//문자열 크기 변수는 /2를 하는데 char형 배열은 그대로 쓰는 이유는 나중에 2개를 합쳐야하기 때문
 	const int string_size_01 = (rand()% (STRING_SIZE / 2 - 1) + 2);
@@ -275,7 +275,7 @@ void process_string()
 }
 
 // 문자열 <-> 숫자 예제
-void string_to_number()
+static void string_to_number()
 {
 	char s1[] = "100 200 300";
 	char s2[30];

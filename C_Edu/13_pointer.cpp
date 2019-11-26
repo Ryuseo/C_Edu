@@ -68,7 +68,7 @@ void play_13()
 }
 
 // 변수의 주소값을 출력하는 함수
-void print_address()
+static void print_address()
 {
 	int i = 10;
 	char c = 'c';
@@ -98,7 +98,7 @@ void print_address()
 }
 
 // 포인터가 가진 주소의 값 출력하는 함수
-void print_value()
+static void print_value()
 {
 	int i = 10;
 	char c = 'c';
@@ -130,7 +130,7 @@ void print_value()
 }
 
 // 포인터에 새로운 주소를 대입하는 함수
-void pointer_01()
+static void pointer_01()
 {
 	int v_01 = 10, v_02 = 20;
 	int* p = NULL;
@@ -164,11 +164,11 @@ void pointer_01()
 // 만약 NULL로 초기화 하지않고 변수의 주소로 초기화 한다면 주석을 잘 달아주자.
 // 솔직히 길어지니까 생성할때 사용할 변수의 주소로 변경하는걸 싫어하지 않는다.
 // 그렇다면 사용이 끝났을때 사용하지 않을때 NULL로 초기화 하는게 좋을까?
-// 문제가 생길 여지를 줄여주긴 하겠지만 대입연산자를 자주 사용하는건 성능에 악영향을 소소하게 줄수 있다.
+// 문제가 생길 여지를 줄여주긴 하겠지만 대입연산자를 자주 사용하는건 성능에 소소하게 악영향을 줄수 있다.
 // 하지만 동적할당과 달리 안한다고 반드시 문제가 생기는건 아니라서 미묘하다.
 // 뭐 몸냥 하자. 혼자하면 문제될거 없겠지만 팀으로 하게되면 회의로 정할 문제라고 생각한다.
 // 머피의 법칙을 기억하자. 컴파일러가 좋아져서 문제가 안될수도 있지만, 잘못될 가능성이 있다면 결국 잘못되기 마련이다.
-void pointer_02()
+static void pointer_02()
 {
 	int v = 10;
 	int* p = NULL;
@@ -198,7 +198,7 @@ void pointer_02()
 // 배열의 첫번째 원소의 주소와 배열의 이름이 같음(?)을 증명하는 함수
 // 뭔가 설명하기 애매하다.
 // 결론은 배열의 이름은 배열 0번 원소를 가리키는 포인터라는 거다.
-void pointer_array_01()
+static void pointer_array_01()
 {
 	int a[] = { 10, 20, 30, 40, 50 };
 
@@ -220,7 +220,7 @@ void pointer_array_01()
 // 슬슬 링크드리스트가 머리에서 아른아른해진다. 자료구조책을 찾아보자.
 // 얼른 c++까지 하고 자료구조도 해야지.
 // 링크드리스트... 포인터 8개... 오목... 아 머리가....
-void pointer_array_02()
+static void pointer_array_02()
 {
 	int a[] = { 10, 20, 30, 40, 50 };
 
@@ -237,7 +237,7 @@ void pointer_array_02()
 }
 
 // 배열을 매개변수로 받고 그 배열을 포인터로 읽어내는 함수의 메인함수에서 호출용
-void array_pointer_para()
+static void array_pointer_para()
 {
 	int a[] = { 10,20,30,40,50 };
 	int n = 5;
@@ -255,7 +255,7 @@ void array_pointer_para()
 }
 
 // 배열을 매개변수로 받고 그 배열을 포인터로 읽어내는 함수의 본체
-void array_pointer_para_sub(const int a[], const int n)
+static void array_pointer_para_sub(const int a[], const int n)
 {
 	printf("함수로 넘겨 받은후 출력 : \n");
 
@@ -267,7 +267,7 @@ void array_pointer_para_sub(const int a[], const int n)
 
 // c에서는 참조에 의한 호출이 지원되지 않는다.
 // 포인터로 비슷하게 구현한다.
-void call_of_ref()
+static void call_of_ref()
 {
 	int a = 100, b = 200;
 
@@ -277,13 +277,14 @@ void call_of_ref()
 }
 
 // 참조에 의한 호출이 일어나는 함수
-void swap(int* a, int *b)	//포인터로 주소값을 매개변수로 받고 있다.
+static void swap(int* a, int *b)	//포인터로 주소값을 매개변수로 받고 있다.
 {
 	*a ^= *b ^= *a ^= *b;
 }
 
 // 상수포인터(?)로 가리키는 주소나 값을 바꿀수 있는지 확인하기 위해 작성한 함수
-void const_int_change_val()
+// 16_adv_pointer에서 자세히 다룸
+static void const_int_change_val()
 {
 	int num_01 = 1;
 	int num_02 = 2;
@@ -300,10 +301,9 @@ void const_int_change_val()
 	printf("\nnum_p가 가리키는 주소 변경\n");
 	printf("num_p's val =\t%d\n", *num_p);
 	printf("num_p's add =\t%p\n", num_p);
-	printf("\n하지만 num_p가 가리키는 주소의 값을 바꿀 수 없었다. 빌드오류가 난다.");
+	printf("\n하지만 num_p가 가리키는 주소의 값을 바꿀 수 없었다. 빌드오류.");
 
 	// 포인터에 const가 붙으면 가리키는 대상을 바꿀수 있으나 값은 바꿀수 없는걸 확인 됬다.
 	// 확인을 하고 싶다면 아래 코드의 주석 기호를 제거하고 빌드하면 빌드오류로 알려준다.
 	// *num_p = 12;
-	// 빌드 오류라서 안된다는걸 실행결과로 보여주기가 어렵다.
 }

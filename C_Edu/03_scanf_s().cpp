@@ -46,7 +46,7 @@ void play_03()
 }
 
 // 함수 이름대로 입력받은 두수를 더하는 함수다.
-void add()
+static void add()
 {
 	int input_a, input_b;												// 입력 받아 저장할 변수
 	printf("정수 2개 입력. 공백또는 엔터로 구분. : ");
@@ -55,18 +55,21 @@ void add()
 }
 
 // 윈의 면적을 구하는 함수다.
-void calculate_area_circle()
+static void calculate_area_circle()
 {
-	double input_r;
+	float input_r;
 
 	printf("구할 원의 반지름을 입력하시오. : ");
 	scanf_s("%f", &input_r);
 
-	printf("원의 면적은 %f\n", input_r * input_r * 3.1415);
+	printf("%f\n", input_r);
+	printf("원의 면적은 %f\n", (double)input_r * (double)input_r * 3.1415);
+	// 입력할때는 %f를 쓰면 float로 받으라고 난리치고
+	// 출력할때는 double로 캐스팅하라고 난리야
 }
 
 // 환율 계산기이다.
-void exchange_rate()
+static void exchange_rate()
 {
 	float rate;						// 원/달러 환율
 	int money;						// 돈
@@ -81,7 +84,7 @@ void exchange_rate()
 }
 
 // 사각형 둘레와 넓이 계산함수다. 이름이 너무 길어져서 정보 출력이라고 지었다.
-void show_rect_info()
+static void show_rect_info()
 {
 	int input_w, input_h;
 	printf("사각형의 너비와 높이를 입력하세요. 공백으로 구분합니다. : ");
@@ -92,13 +95,13 @@ void show_rect_info()
 }
 
 // 사각형의 둘레를 구하는 함수
-int calculate_perimeter_rect(const int w, const int h)
+static int calculate_perimeter_rect(const int w, const int h)
 {
 	return 2 * (w + h);
 }
 
 // 사각형의 넓이를 구하는 함수
-int calculate_area_rect(const int w, const int h)
+static int calculate_area_rect(const int w, const int h)
 {
 	return w * h;
 }

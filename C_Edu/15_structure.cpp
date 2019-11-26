@@ -61,7 +61,7 @@ void play_15()
 	}
 }
 
-void calculate_distance()
+static void calculate_distance()
 {
 	three_D_point_pos a_point, b_point;
 
@@ -82,7 +82,7 @@ void calculate_distance()
 }
 
 // 구조체에 구조체를 포함한 여러가지 데이터를 넣었다.
-void input_employee_info()
+static void input_employee_info()
 {
 	employee_info employee[20] = { NULL };
 
@@ -132,7 +132,7 @@ void input_employee_info()
 
 // 링크드 리스트
 // 동적할당 안들어 간 관계로 간단하게만 구현
-void pointer_N_struct()
+static void pointer_N_struct()
 {
 	linked_list a, b, *p;
 
@@ -152,7 +152,7 @@ void pointer_N_struct()
 
 // 함수에 구조체 넘기기
 // 사실 배열 넘기기와 크게 다르지 않다.
-void func_N_struct()
+static void func_N_struct()
 {
 	year_month_day a = {1,1,1};
 
@@ -168,19 +168,19 @@ void func_N_struct()
 }
 
 // 구조체를 받는 함수. 복사판 버전
-void sub_capyfunc_of_func_N_struct(year_month_day a)
+static void sub_capyfunc_of_func_N_struct(year_month_day a)
 {
 	a.year = 10;
 }
 
 // 구조체를 받는 함수. 원본판 버전
-void sub_movefunc_of_func_N_struct(year_month_day* a)
+static void sub_movefunc_of_func_N_struct(year_month_day* a)
 {
 	a->year = 20;
 }
 
 // 유니온 예제
-void use_union()
+static void use_union()
 {
 	uni A;
 	uni B;
@@ -214,7 +214,7 @@ void use_union()
 }
 
 // 구조체 안에 유니온 예제
-void  choose_between_two_things()
+static void  choose_between_two_things()
 {
 	unistruct test;
 
@@ -241,7 +241,7 @@ void  choose_between_two_things()
 }
 
 // 열거형 예제
-void enumeration()
+static void enumeration()
 {
 	const char* days_name[] = { "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday" };
 	days d = WED;
@@ -250,7 +250,7 @@ void enumeration()
 }
 
 // typedef 예제
-void typedefine()
+static void typedefine()
 {
 	typedef enum { False, True } BOOL;
 

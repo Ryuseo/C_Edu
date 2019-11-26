@@ -60,13 +60,13 @@ struct unistruct
 };
 
 void play_15();
-void calculate_distance();
-void input_employee_info();
-void pointer_N_struct();
-void func_N_struct();
-void sub_capyfunc_of_func_N_struct(year_month_day a);
-void sub_movefunc_of_func_N_struct(year_month_day* a);
-void use_union();
-void choose_between_two_things();
-void enumeration();
-void typedefine();
+static void calculate_distance();
+static void input_employee_info();
+static void pointer_N_struct();
+static void func_N_struct();
+static void sub_capyfunc_of_func_N_struct(year_month_day a);
+static void sub_movefunc_of_func_N_struct(year_month_day* a);
+static void use_union();
+static void choose_between_two_things();
+static void enumeration();
+static void typedefine();

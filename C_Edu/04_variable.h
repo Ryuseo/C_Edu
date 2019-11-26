@@ -4,7 +4,7 @@
 #include <limits>
 
 void play_04();
-void use_sizeof();
-void output_data_type_max_n_min();
-void constant();
-void Ascii_n_number();
+static void use_sizeof();
+static void output_data_type_max_n_min();
+static void constant();
+static void Ascii_n_number();

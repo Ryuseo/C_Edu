@@ -38,7 +38,7 @@ void play_07()
 }
 
 // 제일 기본적인 데이터 정렬방법이다.
-void bubble_sort()
+static void bubble_sort()
 {
 	// 출력을 쉽게 10x10로 하려고 [10][10]으로 했을뿐.
 	int nums[10][10];
@@ -86,7 +86,7 @@ void bubble_sort()
 // 검색하는 함수이다.
 // while을 위해 만든 예제인데, 마땅히 생각나는게 없었다 ㅇㅅㅇ;;;
 // 좀더 적절한 예제가 생각나면 바꿀 예정이다.
-void search()
+static void search()
 {
 	int nums[10] = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
 

@@ -3,9 +3,9 @@
 #include <Windows.h>
 
 void play_03();
-void add();
+static void add();
 void calculate_area_circle();
-void exchange_rate();
-void show_rect_info();
-int calculate_perimeter_rect(const int w, const int h);
-int calculate_area_rect(const int w, const int h);
+static void exchange_rate();
+static void show_rect_info();
+static int calculate_perimeter_rect(const int w, const int h);
+static int calculate_area_rect(const int w, const int h);

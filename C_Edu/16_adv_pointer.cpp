@@ -5,13 +5,15 @@ void play_16()
 	int num;
 	int play = 1;
 
-	printf(" 관련 예제\n\n");
+	printf("포인터 심화 예제\n\n");
 
 	while (play)
 	{
 		printf("1. 더블 포인터 예제\n");
 		printf("2. 기본 포인터 배열 예제\n");
 		printf("3. 문자열 포인터 배열 예제\n");
+		printf("4. 함수 포인터 배열 예제\n");
+		printf("5. const와 포인터 예제\n");
 		printf("실행할 예제 번호 입력.(다른 프로그램 실행은 0번) : ");
 		scanf_s("%d", &num);
 
@@ -36,14 +38,7 @@ void play_16()
 			func_pointer();
 			break;
 		case 5:
-			break;
-		case 6:
-			break;
-		case 7:
-			break;
-		case 8:
-			break;
-		case 9:
+			const_N_pointer();
 			break;
 		default:
 			printf("없는 예문. 다시 입력");
@@ -54,7 +49,7 @@ void play_16()
 }
 
 // 더블 포인터 예제
-void double_pointer()
+static void double_pointer()
 {
 	int i = 100;	// 정수형 변수
 	int* sp = &i;	// i를 가리키는 포인터
@@ -102,7 +97,7 @@ void double_pointer()
 }
 
 // 포인터 배열 예제
-void array_pointer()
+static void array_pointer()
 {
 	int ai[5];
 
@@ -127,7 +122,7 @@ void array_pointer()
 }
 
 // 문자열 포인터 배열 예제(래그드 배열)
-void array_pointer_string()
+static void array_pointer_string()
 {
 	const char* fname[4] = {
 	"apple",
@@ -157,7 +152,56 @@ void array_pointer_string()
 
 // 배열 포인터라는것도 있지만 생략
 // 함수포인터 예제
-void func_pointer()
+static void func_pointer()
 {
+	int result;
+	//함수 포인터 배열이다.
+	int (*pf[2])(int, int);
+	int input_a, input_b;
 
+	printf("더하고 뺄 숫자 2개 입력 : ");
+	scanf_s("%d %d",&input_a, &input_b);
+	
+	pf[0] = add;
+	printf("%d + %d = %d\n", input_a, input_b, result = pf[0](10, 20));
+
+	pf[1] = sub;
+	printf("%d - %d = %d\n", input_a, input_b, result = pf[1](10, 20));
+}
+
+// 함수 포인터 예제에서 쓰일 +-함수
+static int add(const int a, const int b)
+{
+	return a + b;
+}
+
+static int sub(const int a, const int b)
+{
+	return a - b;
+}
+
+//const와 포인터 예제
+static void const_N_pointer()
+{
+	char string_01[] = "qwer";
+	char string_02[] = "asdf";
+
+	const char* p = string_01;
+	char* const q = string_01;
+
+	printf("%s\n", p);
+	//p[0] = 'z';
+	p = string_02;
+	printf("%s\n", p);
+
+	printf("%s\n", q);
+	q[0] = 'z';
+	//q = string_02;
+	printf("%s\n", q);
+
+	printf("const char*는 값은 바꿀 수 없지만 가리키는 주소는 바꿀수 있고,\n");
+	// const가 char을 수식한다고 생각하자. 상수 캐릭터의 포인터.
+	printf("char* const는 값은 바꿀 수 있지만 가리키는 주소는 바꿀수 없다.\n");
+	// const가 포인터를 수식한다고 생각하자. 캐릭터 포인터의 상수화
+	// const가 가까이 있는걸 상수화 한다고 하자.
 }

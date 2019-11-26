@@ -3,5 +3,5 @@
 #include <Windows.h>
 
 void play_11();
-void hanoi();
-void recursion(const int n, const char from, const char tmp, const char to);
+static void hanoi();
+static void recursion(const int n, const char from, const char tmp, const char to);

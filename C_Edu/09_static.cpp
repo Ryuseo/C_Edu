@@ -38,7 +38,7 @@ void play_09()
 	}
 }
 
-void login()
+static void login()
 {
 	printf("static 예제 : 로그인\n\n");
 	int id, password, result;
@@ -55,7 +55,7 @@ void login()
 	printf("로그인 성공\n");
 }
 
-int check(const int id, const int password)
+static int check(const int id, const int password)
 {
 	static int super_id = 1234;			// 함수를 벗어나도 다른 지역변수처럼 값이 없어지지 않고 남아있는다.
 	static int super_password = 5678;

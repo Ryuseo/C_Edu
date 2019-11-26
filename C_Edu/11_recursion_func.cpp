@@ -34,7 +34,7 @@ void play_11()
 }
 
 // 유명한 하노이의 탑 문제
-void hanoi()
+static void hanoi()
 {
 	int input_n;
 	printf("몇개 짜리 탑을 옮길까요? : ");
@@ -43,7 +43,7 @@ void hanoi()
 }
 
 // 자기가 자기자신을 부르는 함수
-void recursion(const int n, const char from, const char tmp, const char to)
+static void recursion(const int n, const char from, const char tmp, const char to)
 {
 	if (n == 1)								// 탈출 조건 반환형이 void라 return은 없다?
 	{

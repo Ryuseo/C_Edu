@@ -46,7 +46,7 @@ void play_04()
 }
 
 // 각 자료형과 변수,상수의 크기 비교
-void use_sizeof()
+static void use_sizeof()
 {
 	bool play = true;			// 루프를 반복할지 말지 정하는 변수
 	int input_num;				// 어느 걸 출력할지 입력받는 변수
@@ -81,59 +81,59 @@ void use_sizeof()
 			play = false;
 			break;
 		case 1:
-			printf("char의 크기는 %d", sizeof(char));
+			printf("char의 크기는 %d\n", (int)sizeof(char));
 			break;
 		case 2:
-			printf("bool의 크기는 %d", sizeof(bool));
+			printf("bool의 크기는 %d\n", (int)sizeof(bool));
 			break;
 		case 3:
-			printf("short의 크기는 %d", sizeof(short));
+			printf("short의 크기는 %d\n", (int)sizeof(short));
 			break;
 		case 4:
-			printf("int의 크기는 %d", sizeof(int));
+			printf("int의 크기는 %d\n", (int)sizeof(int));
 			break;
 		case 5:
-			printf("long의 크기는 %d", sizeof(long));
+			printf("long의 크기는 %d\n", (int)sizeof(long));
 			break;
 		case 6:
-			printf("long long의 크기는 %d", sizeof(long long));
+			printf("long long의 크기는 %d\n", (int)sizeof(long long));
 			break;
 		case 7:
-			printf("float의 크기는 %d", sizeof(float));
+			printf("float의 크기는 %d\n", (int)sizeof(float));
 			break;
 		case 8:
-			printf("double의 크기는 %d", sizeof(double));
+			printf("double의 크기는 %d\n", (int)sizeof(double));
 			break;
 		case 9:
-			printf("long double의 크기는 %d", sizeof(long double));
+			printf("long double의 크기는 %d\n", (int) sizeof(long double));
 			break;
 		case 10:
-			printf("unsigned int의 크기는 %d", sizeof(unsigned int));
+			printf("unsigned int의 크기는 %d\n", (int)sizeof(unsigned int));
 			break;
 		case 11:
-			printf("input_num의 크기는 %d", sizeof(input_num));
+			printf("input_num의 크기는 %d\n", (int)sizeof(input_num));
 			break;
 		case 12:
-			printf("10의 크기는 %d", sizeof(10));
+			printf("10의 크기는 %d\n", (int)sizeof(10));
 			break;
 		case 13:
-			printf("Hello World의 크기는 %d", sizeof("Hello World"));
+			printf("Hello World의 크기는 %d\n", (int)sizeof("Hello World"));
 			break;
 		case 14:
 			printf("전부 출력");
-			printf("char의 크기는 %d", sizeof(char));
-			printf("bool의 크기는 %d", sizeof(bool));
-			printf("short의 크기는 %d", sizeof(short));
-			printf("int의 크기는 %d", sizeof(int));
-			printf("long의 크기는 %d", sizeof(long));
-			printf("long long의 크기는 %d", sizeof(long long));
-			printf("float의 크기는 %d", sizeof(float));
-			printf("double의 크기는 %d", sizeof(double));
-			printf("long double의 크기는 %d", sizeof(long double));
-			printf("unsigned int의 크기는 %d", sizeof(unsigned int));
-			printf("input_num의 크기는 %d", sizeof(input_num));
-			printf("10의 크기는 %d", sizeof(10));
-			printf("Hello World의 크기는 %d", sizeof("Hello World"));
+			printf("char의 크기는 %d\n", (int)sizeof(char));
+			printf("bool의 크기는 %d\n", (int)sizeof(bool));
+			printf("short의 크기는 %d\n", (int)sizeof(short));
+			printf("int의 크기는 %d\n", (int)sizeof(int));
+			printf("long의 크기는 %d\n", (int)sizeof(long));
+			printf("long long의 크기는 %d\n", (int)sizeof(long long));
+			printf("float의 크기는 %d\n", (int)sizeof(float));
+			printf("double의 크기는 %d\n", (int)sizeof(double));
+			printf("long double의 크기는 %d\n", (int)sizeof(long double));
+			printf("unsigned int의 크기는 %d\n", (int)sizeof(unsigned int));
+			printf("input_num의 크기는 %d\n", (int)sizeof(input_num));
+			printf("10의 크기는 %d\n", (int)sizeof(10));
+			printf("Hello World의 크기는 %d\n", (int)sizeof("Hello World"));
 			break;
 		default:
 			printf("잘못된 값 입력. 다시 입력. : ");
@@ -144,7 +144,8 @@ void use_sizeof()
 }
 
 // 각 자료형의 최댓값 최솟값 출력
-void output_data_type_max_n_min()
+// 난 대체 무슨짓을 해논거지.. 오히려 요즘은 의욕이 없어진건가?
+static void output_data_type_max_n_min()
 {
 	bool play = true;			// 루프를 반복할지 말지 정하는 변수
 	int input_num;				// 어느 걸 출력할지 입력받는 변수
@@ -632,7 +633,7 @@ void output_data_type_max_n_min()
 }
 
 // 상수
-void constant()
+static void constant()
 {
 	const int months = 12;								// const 상수. 값을 바꿀 수 없다.
 	int m_salaray, y_salary;
@@ -646,7 +647,7 @@ void constant()
 }
 
 // 아스키코드와 숫자출력
-void Ascii_n_number()
+static void Ascii_n_number()
 {
 	printf("숫자와 대응하는 아스키 코드 출력\n");
 	for (char i = 0; i >= 0; ++i)				// 127번째 아스키 코드를 출력하기 위한 편법. i < 128 이나 i <= 127하면 오버플로우 나면서 무한 루프 돈다.

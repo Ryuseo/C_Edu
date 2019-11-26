@@ -42,12 +42,12 @@ void play_01()
 	}
 }
 
-void print_Hello_World()
+static void print_Hello_World()
 {
 	printf("Hello World");						// 모든 프로그래밍 공부의 시작.
 }
 
-void multi_sentence()
+static void multi_sentence()
 {
 	printf("***************\n");				
 	printf("Hello world\nHello C\n");			// printf하나로 2줄 출력

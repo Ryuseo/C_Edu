@@ -35,7 +35,7 @@ void play_08()
 
 // 지금까지 주구장창 만든게 함수라서 굳이 예제를 만들어야 하나 싶었지만 일단 만들었다.
 // 매개변수도 2개나 받고 값도 반환한다. 정말 오랜만에 return을 썻다.
-void func()
+static void func()
 {
 	int input_a, input_b;
 
@@ -47,7 +47,7 @@ void func()
 	printf("%d를 반환 받았습니다.", recive);
 }
 
-int add(const int a, const int b)
+static int add(const int a, const int b)
 {
 	return a + b;
 }

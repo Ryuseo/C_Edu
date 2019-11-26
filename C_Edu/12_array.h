@@ -5,7 +5,7 @@
 #include <time.h>
 
 void play_12();
-void random_meat_info();
-void random_num_gene();
-void array_to_func();
-void recive_array(int a[], const int size);
+static void random_meat_info();
+static void random_num_gene();
+static void array_to_func();
+static void recive_array(int a[], const int size);

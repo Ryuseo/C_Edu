@@ -5,5 +5,5 @@
 #include <time.h>
 
 void play_07();
-void bubble_sort();
-void search();
+static void bubble_sort();
+static void search();

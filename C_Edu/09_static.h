@@ -3,5 +3,5 @@
 #include <Windows.h>
 
 void play_09();
-void login();
-int check(const int id, const int password);
+static void login();
+static int check(const int id, const int password);

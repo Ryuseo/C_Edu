@@ -3,5 +3,5 @@
 #include <Windows.h>
 
 void play_06();
-void calculate_leap_year();
-void calculate_days_per_month();
+static void calculate_leap_year();
+static void calculate_days_per_month();

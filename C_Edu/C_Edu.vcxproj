@@ -143,6 +143,7 @@
     <ClCompile Include="15_structure.cpp" />
     <ClCompile Include="16_adv_pointer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="17_Preprocessing_N_Bitfield.cpp" />
     <ClCompile Include="템플릿.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
@@ -168,6 +169,7 @@
     <ClInclude Include="15_structure.h" />
     <ClInclude Include="16_adv_pointer.h" />
     <ClInclude Include="library.h" />
+    <ClInclude Include="17_Preprocessing_N_Bitfield.h" />
     <ClInclude Include="템플릿.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>

@@ -69,7 +69,7 @@ void play_05()
 }
 
 // 산술연산자이다.
-void arithmetic_op()
+static void arithmetic_op()
 {
 	int num[2];
 	printf("정수 2개 입력하시오. : ");
@@ -83,7 +83,7 @@ void arithmetic_op()
 }
 
 // 증감연산자이다.
-void incdec()
+static void incdec()
 {
 	int x = 10, y = 10;
 
@@ -98,7 +98,7 @@ void incdec()
 	printf("y = %d\n", y);		// 그렇기에 전위 증감 연산자 사용을 권장한다. 이 성능 차이는 복사생성자의 비용이 비쌀수록 커진다.
 }
 
-void compound_assignment_op()	// 대입(MSDN에서는 할당)연산자. 연산과 대입을 한번에 처리한다.
+static void compound_assignment_op()	// 대입(MSDN에서는 할당)연산자. 연산과 대입을 한번에 처리한다.
 {
 	int x = 10, y = 3;
 	printf("x = 10, y = 3\n\n");
@@ -115,7 +115,7 @@ void compound_assignment_op()	// 대입(MSDN에서는 할당)연산자. 연산과 대입을 한번
 	printf("x <<= y == x = x << y = %d\n", x << y);
 }
 
-void explicit_casting()
+static void explicit_casting()
 {
 	double number = 128.14159265358979323846264338327950288419716939937;
 	printf("double pie = %lf\n", number);		// 왜 %f와 출력 결과가 같을까? -> https:// gigglehd.com/zbxe/10649472  기본 인자 진급이라는 것 때문인듯
@@ -125,7 +125,7 @@ void explicit_casting()
 	printf("(float)pie = %f\n", (float)number);	// 왜 %lf와 출력 결과가 같을까? -> %lf와 %f는 내부적으로 동일하게 작동한다고 한다. 그냥 scanf에는 %lf가 있는데 printf에는 없어서 헷갈리지 말라고 만들었다고도 한다.
 }
 
-void relational_op()
+static void relational_op()
 {
 	int nums[3][3];
 
@@ -172,7 +172,7 @@ void relational_op()
 	}
 }
 
-void logical_op()
+static void logical_op()
 {
 	bool tf[2] = { true, false };
 	for (int i = 0; i < 2; ++i)
@@ -195,7 +195,7 @@ void logical_op()
 	}
 }
 
-void bit_op()
+static void bit_op()
 {
 	int x = 9, y = 10;
 
@@ -207,13 +207,13 @@ void bit_op()
 	printf("x >> 1 = %08X\n", x >> 1);
 }
 
-void sp_skill_op()
+static void sp_skill_op()
 {
 	switch_value_notemp();	// temp없이 2개의 변수의 값 바꾸기
 	check_odd_or_even();	// 3항연산자로 홀짝 체크하기
 }
 
-void switch_value_notemp()
+static void switch_value_notemp()
 {
 	int a = 10, b = 20;
 
@@ -224,7 +224,7 @@ void switch_value_notemp()
 	printf("a = %d, b = %d\n", a, b);
 }
 
-void check_odd_or_even()
+static void check_odd_or_even()
 {
 	printf("홀짝 체크 : ");
 
@@ -245,7 +245,7 @@ void check_odd_or_even()
 // 복합대입		1.535767 1.535550 1.532033 1.535750 1.531283 1.532350
 // 작업하는 순서도 영향을 주지 않을까 하여 앞 3번은 대입 + 산술을 먼저 했고 뒤 3번은 대입을 먼저 했다.
 // case수가 적고 오차도 작지만 대체로 복합대입연산자가 빠른것을 알수 있다.
-void test_compound_assignment_op_performance()
+static void test_compound_assignment_op_performance()
 {
 	int i = 0, j = 0;	// 반복문에 쓸 변수다. 할당하면서 결과가 달라지는걸 방지
 	clock_t start1, start2, end1, end2;
@@ -288,7 +288,7 @@ void test_compound_assignment_op_performance()
 // 신기하게도 오히려 후위가 빠른 경우가 있는걸 볼수 있다.
 // 기본적으로 후위는 값을 바꾸기전에 복사생성자를 실행하고 값을 바꾸어 값을 반환하기 때문에 후위가 더 느리다고 한다.
 // 하지만 이러한 결과가 나온건 클래스같이 복사생성자의 코스트가 큰 변수를 사용하지 않았기 때문에 복사생성자에 걸리는 시간보다 OS의 작업할당에 따른 속도차이가 큰걸로 생각된다..
-void test_incdec_performance()
+static void test_incdec_performance()
 {
 	int i = 0, j = 0;	// 반복문에 쓸 변수다. 할당하면서 결과가 달라지는걸 방지
 	clock_t start1, start2, end1, end2;

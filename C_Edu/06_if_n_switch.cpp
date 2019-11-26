@@ -38,7 +38,7 @@ void play_06()
 }
 
 // 해당 연도가 윤년인지 계산하는 함수
-void calculate_leap_year()	
+static void calculate_leap_year()
 {
 	int year;
 
@@ -57,7 +57,7 @@ void calculate_leap_year()
 }
 
 // 각 달의 일수를 출력하는 함수
-void calculate_days_per_month()
+static void calculate_days_per_month()
 {
 	int month, days;
 

@@ -5,15 +5,15 @@
 #include <time.h>
 
 void play_05();
-void arithmetic_op();
-void incdec();
-void compound_assignment_op();
-void explicit_casting();
-void relational_op();
-void logical_op();
-void bit_op();
-void sp_skill_op();
-void switch_value_notemp();
-void check_odd_or_even();
-void test_compound_assignment_op_performance();
-void test_incdec_performance();
+static void arithmetic_op();
+static void incdec();
+static void compound_assignment_op();
+static void explicit_casting();
+static void relational_op();
+static void logical_op();
+static void bit_op();
+static void sp_skill_op();
+static void switch_value_notemp();
+static void check_odd_or_even();
+static void test_compound_assignment_op_performance();
+static void test_incdec_performance();
